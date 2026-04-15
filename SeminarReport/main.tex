@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+
+\usepackage{hcmus-report-template}
+\usepackage{svg}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,shapes.geometric}
+
+% Disable indentation on new paragraphs
+\setlength{\parindent}{0pt}
+
+% Line spacing 1.5
+\renewcommand{\baselinestretch}{1.5}
+
+% Optional: graphic path
+% \graphicspath{PATH_TO_GRAPHIC_FOLDER}
+
+% To use Times font family, uncomment this row
+% \usepackage{mathptmx}
+
+% To use roman section / subsection, uncomment these rows
+% \renewcommand{\thesection}{\Roman{section}}
+% \renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
+
+% Define course name, report name and report title.
+\newcommand{\coursename}{Data Structures - CS163}
+\newcommand{\reportname}{Data Structure Visualizer}
+\newcommand{\reporttitle}{Final Project}
+
+\newcommand{\studentname}{Nguyễn Đình Minh Huy (25125083) \\ xxx (xxxx) \\ xxx (xxxx) \\ xxx (xxxx)}
+\newcommand{\teachername}{}
+
+% Header
+\lhead{\reporttitle}
+\rhead{
+University of Science - VNUHCM\\
+\coursename
+}
+
+% Footer
+\newcommand{\leftfooter}{\LaTeX\ by \href{https://github.com/ndmhuy}{Huy, Nguyen Dinh Minh}}
+\lfoot{\leftfooter}
+
+% ============ DOCUMENT ============
+\begin{document}
+\renewcommand{\proofname}{Proof}
+\pagenumbering{roman}
+\input{content/title.tex}
+\tableofcontents
+\pagebreak
+% \listoftables
+% \pagebreak
+% \listoffigures
+% \pagebreak
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% 1. Cover Page (title.tex is already included above)
+% (title.tex)
+
+% Table of Contents is generated above before arabic page numbering.
+
+% 3. Abstract: Brief summary of the purpose and features
+\input{content/01_abstract}
+
+% 4. Introduction: Background, motivation, and objectives
+\input{content/02_introduction}
+
+% 5. Group Information: Names, roles, tasks, and contribution percentages
+\input{content/03_group_info}
+
+% 6. Data Storage: How data is stored and the rationale behind it
+\input{content/04_data_storage}
+
+% 7. Project Architecture: Folder structure and main data structure
+\input{content/05_architecture}
+
+% 8. Implementation Details: List of structs/classes, functions, and main flows
+\input{content/06_implementation}
+
+% 9. Technical Problems and Solutions: Challenges faced and how the group resolved them
+\input{content/07_tech_problems}
+
+% 10. Features Demonstration: Step-by-step screenshots/explanations of features
+\input{content/08_features_demo}
+
+% 11. Conclusion: Summary of achievements, strengths, and future enhancements
+\input{content/09_conclusion}
+
+% References: List of resources, books, websites, etc.
+\input{ref/ref.tex}
+
+% Appendix
+\appendix
+% Add \cleardoublepage to move appendices to next page.
+\end{document}
