@@ -1,3 +1,164 @@
 \section{Source Codes \& Instructions}
 
-% Member 2 writes content here (Instructions on how to compile and run C++/Python code)...
+The source files are in \texttt{SourceCode/ShortestPath/}, while heap headers are in \texttt{SourceCode/Heap/}.
+
+\subsection{Dependencies}
+The benchmark now supports an optional Boost-backed heap backend. On macOS, install it with:
+\begin{verbatim}
+brew install boost
+\end{verbatim}
+
+If Boost headers are unavailable, the benchmark automatically falls back to the custom heap implementations.
+
+\subsection{What Is Included}
+\begin{itemize}
+	\item Core graph structures: \texttt{AdjacencyList.*}, \texttt{AdjacencyMatrix.*}, \texttt{IGraphStructure.h}, \texttt{Edge.h}.
+	\item Shortest path implementations: \texttt{ShortestPath.*}.
+	\item Benchmark runner source: \texttt{read\_graph\_info.cpp}.
+	\item Graph generator source: \texttt{graph\_generator.cpp}.
+  \item DAG graph generator source: \texttt{dag\_graph\_generator.cpp}.
+	\item Heap implementations: \texttt{IndexedPriorityQueue.h}, \texttt{IndexedDaryHeap.h}, \texttt{BinaryHeap.h}.
+  \item Datasets: \texttt{dataset1\_sparse\_large.txt}, \texttt{dataset2\_dense\_medium.txt}, \texttt{dataset3\_complete\_apsp.txt}, \texttt{dataset4\_negative\_sssp.txt}, \texttt{dataset5\_dag\_sssp.txt}.
+  \item Benchmark logs: \texttt{bench\_dataset1\_sparse\_large\_boost.log} to \texttt{bench\_dataset5\_dag\_sssp\_boost.log}.
+\end{itemize}
+
+\subsection{Input Graph Format}
+Each edge line is:
+\begin{verbatim}
+from to weight
+\end{verbatim}
+
+If \texttt{weight} is omitted, the loader defaults to weight $1$.
+
+\subsection{Compile Instructions (Maximum Optimization)}
+All commands below are compile-only and use aggressive optimization settings.
+
+\textbf{Working directory (from repository root):}
+\begin{verbatim}
+cd SourceCode/ShortestPath
+\end{verbatim}
+
+\subsubsection{macOS (clang++)}
+\textbf{Compile graph generator:}
+\begin{verbatim}
+clang++ -std=c++20 -O3 -march=native -mtune=native -flto \
+  -DNDEBUG graph_generator.cpp -o graph_generator
+\end{verbatim}
+
+\textbf{Compile DAG graph generator:}
+\begin{verbatim}
+clang++ -std=c++20 -O3 -march=native -mtune=native -flto \
+  -DNDEBUG dag_graph_generator.cpp -o dag_graph_generator
+\end{verbatim}
+
+\textbf{Compile benchmark runner:}
+\begin{verbatim}
+clang++ -std=c++20 -O3 -march=native -mtune=native -flto \
+  -DNDEBUG -I/opt/homebrew/include read_graph_info.cpp ShortestPath.cpp \
+  AdjacencyList.cpp AdjacencyMatrix.cpp -o benchmark
+\end{verbatim}
+
+\subsubsection{Windows (MSYS2/MinGW-w64 g++)}
+\textbf{Compile graph generator:}
+\begin{verbatim}
+g++ -std=c++20 -O3 -march=native -mtune=native -flto \
+  -DNDEBUG graph_generator.cpp -o graph_generator.exe
+\end{verbatim}
+
+\textbf{Compile DAG graph generator:}
+\begin{verbatim}
+g++ -std=c++20 -O3 -march=native -mtune=native -flto \
+  -DNDEBUG dag_graph_generator.cpp -o dag_graph_generator.exe
+\end{verbatim}
+
+\textbf{Compile benchmark runner:}
+\begin{verbatim}
+g++ -std=c++20 -O3 -march=native -mtune=native -flto \
+  -DNDEBUG read_graph_info.cpp ShortestPath.cpp \
+  AdjacencyList.cpp AdjacencyMatrix.cpp -o benchmark.exe
+\end{verbatim}
+
+\subsubsection{Windows (MSVC cl)}
+\textbf{Compile graph generator:}
+\begin{verbatim}
+cl /std:c++20 /O2 /GL /DNDEBUG graph_generator.cpp \
+  /link /LTCG /OUT:graph_generator.exe
+\end{verbatim}
+
+\textbf{Compile DAG graph generator:}
+\begin{verbatim}
+cl /std:c++20 /O2 /GL /DNDEBUG dag_graph_generator.cpp \
+  /link /LTCG /OUT:dag_graph_generator.exe
+\end{verbatim}
+
+\textbf{Compile benchmark runner:}
+\begin{verbatim}
+cl /std:c++20 /O2 /GL /DNDEBUG read_graph_info.cpp ShortestPath.cpp \
+  AdjacencyList.cpp AdjacencyMatrix.cpp /link /LTCG /OUT:benchmark.exe
+\end{verbatim}
+
+\textit{Note:} MSVC does not support \texttt{-march=native}. The closest equivalent is \texttt{/O2} with link-time optimization (\texttt{/GL + /LTCG}).
+
+\subsection{Run Workflow (After Compilation)}
+\textbf{1. Generate a sample graph:}
+\begin{verbatim}
+# macOS / Linux
+./graph_generator 10000 50000 1 20 1 demo_graph.txt
+
+# Windows (MinGW or MSVC shell)
+graph_generator.exe 10000 50000 1 20 1 demo_graph.txt
+\end{verbatim}
+
+\textbf{Arguments:}
+\begin{itemize}
+  \item \texttt{10000}: number of vertices.
+  \item \texttt{50000}: number of edges.
+  \item \texttt{1 20}: minimum and maximum edge weights.
+  \item \texttt{1}: directed graph (use \texttt{0} for undirected).
+  \item \texttt{demo\_graph.txt}: output filename.
+\end{itemize}
+
+\textbf{2. Run benchmark:}
+\begin{verbatim}
+# macOS / Linux
+./benchmark dataset1_sparse_large.txt 3 200 --heap-backend=boost
+
+# Windows (MinGW or MSVC shell)
+benchmark.exe dataset1_sparse_large.txt 3 200 --heap-backend=boost
+\end{verbatim}
+
+\textbf{Benchmark positional arguments:}
+\begin{itemize}
+  \item \texttt{dataset1\_sparse\_large.txt}: input graph file path.
+  \item \texttt{3}: number of source vertices used for SSSP runs.
+  \item \texttt{200}: Floyd-Warshall vertex cap (induced subgraph size).
+\end{itemize}
+
+\textbf{Benchmark flags (detailed):}
+\begin{itemize}
+  \item \texttt{--skip-bellman}: skips Bellman-Ford only. Use this for large graphs when negative-edge support is not being tested.
+  \item \texttt{--skip-floyd}: skips Floyd-Warshall only. Use this when APSP is too expensive for the selected graph size.
+  \item \texttt{--skip-heavy}: skips both Bellman-Ford and Floyd-Warshall. Recommended for quick demo runs focused on Dijkstra variants.
+  \item \texttt{--heap-backend=custom}: uses the custom indexed heap implementations.
+  \item \texttt{--heap-backend=boost}: uses Boost heap containers when Boost headers are installed.
+\end{itemize}
+
+\textbf{Example full run (no skipping, small graph):}
+\begin{verbatim}
+./benchmark dataset4_negative_sssp.txt 3 200
+\end{verbatim}
+
+\textbf{DAG benchmark note:} for DAG inputs, the benchmark reports both the original \texttt{dagShortestPath} implementation and the fairer \texttt{dagShortestPath (precomputed topo order)} variant, which reuses one topological order across source runs.
+
+\subsection{Generate the Benchmark Datasets}
+\begin{verbatim}
+./graph_generator 100000 500000 1 10000 1 dataset1_sparse_large.txt
+./graph_generator 5000 10000000 1 100000 1 dataset2_dense_medium.txt
+./graph_generator 1000 999000 1 1000 1 dataset3_complete_apsp.txt
+./graph_generator 1000 25000 -100 1000 1 dataset4_negative_sssp.txt
+\end{verbatim}
+
+\subsection{Generate the DAG Benchmark Dataset}
+\begin{verbatim}
+./dag_graph_generator 100000 500000 1 10000 1 dataset5_dag_sssp.txt
+\end{verbatim}

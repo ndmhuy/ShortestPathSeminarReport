@@ -1,3 +1,51 @@
 \section{Datasets}
 
-% Member 3 writes content here (Introduction to datasets from SNAP, OpenStreetMap, or graph generation scripts)...
+We generated five directed weighted benchmark datasets to stress different shortest path regimes.
+
+\subsection{Dataset Suite}
+\begin{center}
+\begin{tabular}{|l|r|r|r|r|l|}
+\hline
+\textbf{Test Dataset} & \textbf{Vertices ($V$)} & \textbf{Edges ($E$)} & \textbf{Min W ($m$)} & \textbf{Max W ($M$)} & \textbf{Primary Algorithms to Compare} \\
+\hline
+Sparse Large & 100{,}000 & 500{,}000 & 1 & 10{,}000 & Lazy vs. Eager vs. D-ary \\
+\hline
+Dense Medium & 5{,}000 & 10{,}000{,}000 & 1 & 100{,}000 & Eager vs. D-ary vs. Bellman-Ford \\
+\hline
+Complete (APSP) & 1{,}000 & 999{,}000 & 1 & 1{,}000 & Floyd-Warshall vs. ($V \times$ Eager) \\
+\hline
+Negative SSSP & 1{,}000 & 25{,}000 & -100 & 1{,}000 & Bellman-Ford vs. Floyd-Warshall \\
+\hline
+Dag SSSP & 100{,}000 & 500{,}000 & 1 & 10{,}000 & DAG shortest path vs. Dijkstra variants \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Dataset Files}
+\begin{itemize}
+	\item \texttt{dataset1\_sparse\_large.txt}
+	\item \texttt{dataset2\_dense\_medium.txt}
+	\item \texttt{dataset3\_complete\_apsp.txt}
+	\item \texttt{dataset4\_negative\_sssp.txt}
+	\item \texttt{dataset5\_dag\_sssp.txt}
+\end{itemize}
+
+\subsection{Header Format}
+Each dataset is emitted with metadata header lines, where the dataset name is taken from the output filename:
+\begin{verbatim}
+# Directed <dataset_name> graph dataset
+# Nodes: <V> Edges: <E>
+# FromNodeId    ToNodeId
+\end{verbatim}
+
+followed by weighted edges in the form:
+\begin{verbatim}
+from to weight
+\end{verbatim}
+
+\subsection{Benchmark Interpretation}
+The DAG dataset is important because it highlights two different costs:
+\begin{itemize}
+	\item \texttt{dagShortestPath}: recomputes the topological traversal each run.
+	\item \texttt{dagShortestPath (precomputed topo order)}: reuses one topological order across source runs and is the fairer textbook-style comparison.
+\end{itemize}
