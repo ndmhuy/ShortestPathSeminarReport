@@ -1,12 +1,40 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Introduction \& History}{2}{section.1}%
 \contentsline {section}{\numberline {2}Main Data Structures \& Algorithms}{2}{section.2}%
-\contentsline {section}{\numberline {3}Step-by-step Demo}{2}{section.3}%
-\contentsline {section}{\numberline {4}Implementation Notes \& Complexity}{2}{section.4}%
-\contentsline {section}{\numberline {5}Applications}{2}{section.5}%
-\contentsline {section}{\numberline {6}Quiz}{2}{section.6}%
-\contentsline {section}{\numberline {7}Programming Assignments}{2}{section.7}%
-\contentsline {section}{\numberline {8}Source Codes \& Instructions}{2}{section.8}%
-\contentsline {section}{\numberline {9}Datasets}{2}{section.9}%
-\contentsline {section}{\numberline {10}Comparison}{2}{section.10}%
-\contentsline {section}{References}{3}{section*.2}%
+\contentsline {section}{\numberline {3}Single Source Shortest Path (SSSP)}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Shortest Path in DAGs}{2}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Topological Order}{2}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}DAG Shortest Path Processing}{3}{subsubsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.2}Dijkstra's Algorithm}{4}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Dijkstra Optimizing}{5}{subsubsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.3}Shortest Path in Bellman-Ford}{6}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}How Bellman-Ford works: Global Relaxation}{6}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Bellman-Ford Superpower: Negative Cycle Detection}{7}{subsubsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.4}SSSP Algorithm: How to track the path?}{9}{subsection.3.4}%
+\contentsline {section}{\numberline {4}All Pairs Shortest Path (APSP)}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Floyd-Warshall Algorithm}{9}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}The Intermediate Node}{10}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}How to track the path?}{11}{subsubsection.4.1.2}%
+\contentsline {section}{\numberline {5}Step-by-step Demo}{11}{section.5}%
+\contentsline {section}{\numberline {6}Implementation Notes \& Complexity}{11}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Implementation Notes}{11}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Complexity Notes in Practice}{12}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Engineering Trade-offs}{12}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Applications}{13}{section.7}%
+\contentsline {section}{\numberline {8}Quiz}{13}{section.8}%
+\contentsline {section}{\numberline {9}Programming Assignments}{13}{section.9}%
+\contentsline {section}{\numberline {10}Source Codes \& Instructions}{13}{section.10}%
+\contentsline {subsection}{\numberline {10.1}What Is Included}{13}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Input Graph Format}{13}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Compile Instructions (Maximum Optimization)}{13}{subsection.10.3}%
+\contentsline {subsubsection}{\numberline {10.3.1}macOS (clang++)}{14}{subsubsection.10.3.1}%
+\contentsline {subsubsection}{\numberline {10.3.2}Windows (MSYS2/MinGW-w64 g++)}{14}{subsubsection.10.3.2}%
+\contentsline {subsubsection}{\numberline {10.3.3}Windows (MSVC cl)}{14}{subsubsection.10.3.3}%
+\contentsline {subsection}{\numberline {10.4}Run Workflow (After Compilation)}{15}{subsection.10.4}%
+\contentsline {subsection}{\numberline {10.5}Generate the 4 Benchmark Datasets}{16}{subsection.10.5}%
+\contentsline {section}{\numberline {11}Datasets}{16}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Dataset Suite}{16}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Dataset Files}{17}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Header Format}{17}{subsection.11.3}%
+\contentsline {section}{\numberline {12}Comparison}{17}{section.12}%
+\contentsline {section}{References}{18}{section*.2}%

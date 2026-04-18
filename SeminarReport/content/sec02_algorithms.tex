@@ -1,3 +1,310 @@
 \section{Main Data Structures \& Algorithms}
+In a weighted graph, the objective of a shortest path algorithm is to identify a sequence of edges connecting vertices such that the sum of the edge weights is minimized. The problem is generally bifurcated into two primary categories:
+\begin{itemize}
+    \item \textbf{Single Source Shortest Path (SSSP):} Determines the minimum cost to travel from a single starting node (the source) to all other reachable nodes in the graph.
+    \item \textbf{All Pairs Shortest Path (APSP):} Computes the shortest paths between every possible pair of vertices simultaneously.
+\end{itemize}
 
-% Member 2 writes content here (Adjacency Matrix/List, Min-Heap, Greedy/DP approaches)...
+\section{Single Source Shortest Path (SSSP)}
+The Single Source Shortest Path (SSSP) problem asks a fundamental question: \textit{What is the shortest path from one starting node to all other nodes?}
+
+\subsection{Shortest Path in DAGs}
+\textbf{Historical Context:} While shortest path traversal on Directed Acyclic Graphs represents a fundamental application of graph theory rather than a single named algorithm, its core mechanism—Topological Sorting—was mathematically formalized by Arthur B. Kahn in 1962. The sequential evaluation method used to find shortest paths has direct roots in the PERT (Program Evaluation and Review Technique) charts developed by the United States Navy in the 1950s for project scheduling.
+
+\vspace{0.2cm}
+A \textbf{Directed Acyclic Graph (DAG)} is a directed graph which forms no cycles or loops. The SSSP problem can be solved efficiently on a DAG due to the fact that the nodes can be ordered in a topological ordering via topsort and processed sequentially.
+
+\subsubsection{Topological Order}
+A \textit{linear ordering of its vertices such that for every directed edge from vertex $u$ to vertex $v$ ($u \to v$), vertex $u$ comes before vertex $v$ in the ordering}.
+
+Topological sorting can be implemented in two standard ways: a DFS-based approach or a BFS-based approach (Kahn's algorithm). Kahn's algorithm is especially useful when we want built-in DAG validation, because it can detect non-DAG inputs when not all vertices can be processed. In this implementation, we use the DFS-based method and assume the input graph is already a DAG.
+
+\textbf{Topological Sort Pseudocode:}
+\begin{algorithm}[H]
+\caption{Topological Sort}
+\begin{algorithmic}[1]
+\Function{topologicalSort}{$graph$}
+    \State $visited \gets [\text{false}, \text{false}, \dots , \text{false}]$ \Comment{size $V$}
+    \State $order \gets \text{empty stack}$
+    \For{$i \gets 0$ \textbf{to} $V - 1$}
+        \If{\textbf{not} $visited[i]$}
+            \State \Call{dfs}{$graph, i, visited, order$}
+        \EndIf
+    \EndFor
+    \State \Return $order$
+\EndFunction
+
+\Function{dfs}{$graph, index, visited, order$}
+    \State $visited[index] \gets \text{true}$
+    \For{$edge$ \textbf{in} $graph[index]$}
+        \If{\textbf{not} $visited[edge.to]$}
+            \State \Call{dfs}{$graph, edge.to, visited, order$}
+        \EndIf
+    \EndFor
+    \State $order.\text{push}(index)$
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\subsubsection{DAG Shortest Path Processing}
+\begin{enumerate}
+    \item Select the first coming vertex from the topological ordering.
+    \item Explore all its neighbours.
+    \item If finding a shorter path, relax the edge.
+    \item Reprocess until finishing.
+\end{enumerate}
+
+\textbf{DAG Shortest Path Pseudocode:}
+\begin{algorithm}[H]
+\caption{DAG Shortest Path}
+\begin{algorithmic}[1]
+\Function{dagShortestPath}{$graph, start$}
+    \State $distances \gets [\infty, \infty, \dots , \infty]$ \Comment{size $V$}
+    \State $distances[start] \gets 0$
+    \State $topoOrder \gets \Call{topologicalSort}{graph}$
+    \While{$topoOrder$ \textbf{is not} empty}
+        \State $index \gets topoOrder.\text{pop}()$
+        \If{$distances[index] == \infty$}
+            \State \textbf{continue}
+        \EndIf
+        \For{$edge$ \textbf{in} $graph[index]$}
+            \State $newDist \gets distances[index] + edge.cost$
+            \If{$newDist < distances[edge.to]$}
+                \State $distances[edge.to] \gets newDist$
+            \EndIf
+        \EndFor
+    \EndWhile
+    \State \Return $distances$
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\textbf{Complexity Analysis:}
+\begin{itemize}
+    \item \textbf{Time Complexity: $\mathbf{O(V + E)}$}. We are traversing every vertex and edge.
+    \item \textbf{Space Complexity: $\mathbf{O(V)}$}. We are storing the topological ordering and the distances array.
+\end{itemize}
+
+\subsection{Dijkstra's Algorithm}
+\textbf{Historical Context:} Conceived by the Dutch computer scientist Edsger W. Dijkstra in 1956 (and formally published in 1959 in \textit{A note on two problems in connexion with graphs}), this algorithm was famously designed in just twenty minutes while Dijkstra was drinking coffee at a café in Amsterdam. He initially created it to find the shortest path between the cities of Rotterdam and Groningen to demonstrate the capabilities of the new ARMAC computer.
+
+\vspace{0.2cm}
+Given a graph of non-negative weight edges. We can greedily assume that adding edges can only increase the total path cost. 
+
+Therefore, we come up with the \textbf{Greedy strategy}: continually select the unvisited node with the smallest known distance using a min-heap assuming it cannot be improved anymore, and then relaxes its outgoing edges.
+
+\textbf{Shortest Path Pseudocode:}
+\begin{algorithm}[H]
+\caption{Dijkstra's Algorithm}
+\begin{algorithmic}[1]
+\Function{dijkstra}{$graph, start$}
+    \State $visited \gets [\text{false}, \text{false}, \dots , \text{false}]$ \Comment{size $V$}
+    \State $distances \gets [\infty, \infty, \dots , \infty]$ \Comment{size $V$}
+    \State $distances[start] \gets 0$
+    \State $pq \gets \text{empty priority queue (min-heap)}$
+    \State $pq.\text{insert}(\{0, start\})$
+    
+    \While{$pq$ \textbf{is not} empty}
+        \State $index, minValue \gets pq.\text{poll}()$
+        \State $visited[index] \gets \text{true}$
+        \If{$distances[index] < minValue$}
+            \State \textbf{continue}
+        \EndIf
+        \For{$edge$ \textbf{in} $graph[index]$}
+            \If{$visited[edge.to]$}
+                \State \textbf{continue}
+            \EndIf
+            \State $newDist \gets distances[index] + edge.cost$
+            \If{$newDist < distances[edge.to]$}
+                \State $distances[edge.to] \gets newDist$
+                \State $pq.\text{insert}(\{edge.to, newDist\})$
+            \EndIf
+        \EndFor
+    \EndWhile
+    \State \Return $distances$
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\textbf{Complexity Analysis:}
+\begin{itemize}
+    \item \textbf{Time Complexity: $\mathbf{O((V+E)\log V)}$}. We extract exactly $V$ vertices. Each extraction from a heap takes $O(\log V)$. We evaluate at most $E$ edges. If we relax the edge, we push new value into the heap takes $O(\log V)$.
+    \item \textbf{Space Complexity: $\mathbf{O(V + E)}$}. We are storing the distances array for every vertex and the priority queue for each relaxed edge.
+\end{itemize}
+
+\subsubsection{Dijkstra Optimizing}
+\begin{itemize}
+    \item \textbf{Lazy Dijkstra:} uses a standard Binary Heap. Time complexity: $\mathbf{O((V + E)\log V)}$.
+    \item \textbf{Eager Dijkstra:} uses an indexed priority queue to instantly locate the vertex and update the value dynamically. Time complexity: $\mathbf{O((V + E)\log V)}$.
+    \item \textbf{D-ary Heap Dijkstra (dense graph optimizer):} uses a Heap giving each parent $D$ children, cheaper when updating but more expensive when polling. \\ Time complexity: $\mathbf{O(V \log_D V + E \log_D V)}$.
+    \item \textbf{Fibonacci Heap Dijkstra:} Replaces the standard tree-based heap with a highly complex collection of trees called a Fibonacci Heap which achieved updating time an amortized $O(1)$. Time Complexity: $\mathbf{O(V \log V + E)}$.
+\end{itemize}
+
+\subsection{Shortest Path in Bellman-Ford}
+\textbf{Historical Context:} This algorithm primarily bears the names of Richard Bellman (who published it in 1958 in \textit{On a routing problem}) and Lester R. Ford Jr. (who developed the foundational flow formulations in 1956). However, the algorithm was independently published by Edward F. Moore in 1959 and Alfonso Shimbel in 1955. As a pioneering application of Bellman's principle of optimality, it introduced dynamic programming to the realm of graph routing.
+
+\vspace{0.2cm}
+When a graph contains negative weight edges, Dijkstra's greedy logic break down. What should we do?
+
+Bellman-Ford is a Single Source Shortest Path (SSSP) algorithm designed specifically to handle graphs with negative weights. Unlike Dijkstra (Greedy), Bellman-Ford uses \textbf{Dynamic Programming}. It calculates shortest paths in a bottom-up manner by gradually allowing paths to use more and more edges.
+
+\subsubsection{How Bellman-Ford works: Global Relaxation}
+\begin{itemize}
+    \item \textbf{Step 1: Initialization.} Set the distance to the source node to $0$ and all other nodes to $\infty$.
+    \item \textbf{Step 2: Edge Relaxation.} Iterate through every single edge $(u, v)$ with weight $w$ in the graph. If a new shorter path is found, then relax that edge.
+    \item \textbf{Step 3: Repeat.} Perform this full-graph relaxation exactly $\mathbf{V - 1}$ \textbf{times}.
+\end{itemize}
+
+\textit{Why V - 1 times?} We expect after one loop the path is extended by at least one edge. The shortest path in a graph with $V$ vertices without cycles, contains at least $V - 1$ edges.
+
+\subsubsection{Bellman-Ford Superpower: Negative Cycle Detection}
+\textbf{Negative cycle:} \textit{A loop in the graph where the sum of the edge weights is less than zero. If one exists, you can loop infinitely to achieve a distance of $-\infty$. No shortest path can be defined.}
+
+After running $V - 1$ iterations, run the relaxation one more time. If any edge still can be relaxed, that edge is in a negative cycle. All vertices can be routed from the negative vertices have $-\infty$ distance.
+
+\textbf{Bellman-Ford Pseudocode:}
+\begin{algorithm}[H]
+\caption{Bellman-Ford Algorithm}
+\begin{algorithmic}[1]
+\Function{bellmanford}{$graph, start$}
+    \State $dist \gets [\infty, \infty, \dots , \infty]$ \Comment{size $V$}
+    \State $dist[start] \gets 0$
+    \For{$i \gets 1$ \textbf{to} $V - 1$}
+        \For{$edge$ \textbf{in} $graph.edges$}
+            \If{$dist[edge.from] + edge.cost < dist[edge.to]$}
+                \State $dist[edge.to] \gets dist[edge.from] + edge.cost$
+            \EndIf
+        \EndFor
+    \EndFor
+    
+    \State $negVertices \gets \text{empty queue}$
+    \For{$edge$ \textbf{in} $graph.edges$}
+        \If{$dist[edge.from] + edge.cost < dist[edge.to]$}
+            \State $dist[edge.to] \gets -\infty$
+            \State $negVertices.\text{enqueue}(edge.to)$
+        \EndIf
+    \EndFor
+    
+    \State \Call{processNegativeCycle}{$graph, negVertices, dist$}
+    \State \Return $dist$
+\EndFunction
+
+\Function{processNegativeCycle}{$graph, negVertices, dist$}
+    \State $visited \gets [\text{false}, \text{false}, \dots , \text{false}]$ \Comment{size $V$}
+    \While{$negVertices$ \textbf{is not} empty}
+        \State $vertex \gets negVertices.\text{dequeue}()$
+        \If{$visited[vertex]$}
+            \State \textbf{continue}
+        \EndIf
+        \State \Call{dfs}{$graph, vertex, negVertices, dist, visited$}
+    \EndWhile
+\EndFunction
+
+\Function{dfs}{$graph, vertex, negVertices, dist, visited$}
+    \State $visited[vertex] \gets \text{true}$
+    \For{$edge$ \textbf{in} $graph[vertex]$}
+        \If{$visited[edge.to]$}
+            \State \textbf{continue}
+        \EndIf
+        \State $dist[edge.to] \gets -\infty$
+        \State $negVertices.\text{enqueue}(edge.to)$
+        \State \Call{dfs}{$graph, edge.to, negVertices, dist, visited$}
+    \EndFor
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\textbf{Complexity Analysis:}
+\begin{itemize}
+    \item \textbf{Time Complexity: $\mathbf{O(E \cdot V)}$}. We iterate every edges $V - 1$ times and one more loop for negative cycle detection.
+    \item \textbf{Space Complexity: $\mathbf{O(V)}$}. We are storing the distances array for every vertex and the priority queue for each relaxed edge.
+\end{itemize}
+
+\textbf{Data Insight (Placeholder):}
+\begin{itemize}
+    \item [Observed graph density/sparsity pattern and why Bellman-Ford was or was not practical on the dataset.]
+\end{itemize}
+
+\subsection{SSSP Algorithm: How to track the path?}
+By introducing a \texttt{prev} array, where \texttt{prev[i]} denotes its previous vertex. We simply update it whenever relaxing the edges:
+
+\begin{algorithm}[H]
+\begin{algorithmic}[1]
+\If{$dist[edge.from] + edge.cost < dist[edge.to]$}
+    \State $dist[edge.to] \gets dist[edge.from] + edge.cost$
+    \State $prev[edge.to] \gets edge.from$
+\EndIf
+\end{algorithmic}
+\end{algorithm}
+
+Then when we need to track the path, we can route from the end to start through the \texttt{prev} array then reversing that result.
+
+\section{All Pairs Shortest Path (APSP)}
+\textit{What is the shortest path between all pairs of nodes?}
+
+\subsection{Floyd-Warshall Algorithm}
+\textbf{Historical Context:} Published independently by Robert W. Floyd (\textit{Algorithm 97: Shortest Path}, 1962) and Stephen Warshall (\textit{A theorem on Boolean matrices}, 1962), this algorithm is an elegant realization of dynamic programming. It fundamentally relies on a theorem Warshall initially developed for computing the transitive closure of a graph, which Floyd ingeniously adapted to compute minimal path weights.
+
+\vspace{0.2cm}
+We are no longer looking for paths from a single source. We want to find the shortest path between every pair of vertices $(u, v)$ simultaneously.
+
+Floyd-Warshall is an APSP dynamic programming algorithm which relies on the idea of comparing between direct connection and routing through an intermediate vertex.
+
+\subsubsection{The Intermediate Node}
+\textit{Can we find a shorter path from $i$ to $j$ by routing it through an intermediate node $k$?}
+
+\begin{itemize}
+    \item \textbf{Initialization:} Create a 2D matrix where \texttt{dist[i][j]} is the weight of the direct edge from $i$ to $j$ (or $\infty$ if no direct edge exists).
+    \item We iterate $V$ loops with index of $k$, that $\texttt{dist}[i][k] + \texttt{dist}[k][j]$ is the distance when routing through vertex $k$. If it is better than the current connection, we update $\texttt{dist}[i][j]$. We are processing for every pair $(i, j)$.
+\end{itemize}
+
+\textbf{Floyd-Warshall Pseudocode:}
+\begin{algorithm}[H]
+\caption{Floyd-Warshall Algorithm}
+\begin{algorithmic}[1]
+\Function{setup}{$graph, dist$}
+    \For{$i \gets 0$ \textbf{to} $V - 1$}
+        \State $dist[i][i] \gets 0$
+    \EndFor
+    \For{$edge$ \textbf{in} $graph.edges$}
+        \State $dist[edge.from][edge.to] \gets edge.cost$
+    \EndFor
+\EndFunction
+
+\Function{floydwarshall}{$graph$}
+    \State $dist \gets \text{2D array of size } V \times V \text{ initialized to } \infty$
+    \State \Call{setup}{$graph, dist$}
+    \For{$k \gets 0$ \textbf{to} $V - 1$}
+        \For{$i \gets 0$ \textbf{to} $V - 1$}
+            \For{$j \gets 0$ \textbf{to} $V - 1$}
+                \If{$dist[i][k] + dist[k][j] < dist[i][j]$}
+                    \State $dist[i][j] \gets dist[i][k] + dist[k][j]$
+                \EndIf
+            \EndFor
+        \EndFor
+    \EndFor
+    \State \Return $dist$
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+\textbf{Complexity Analysis:}
+
+\begin{itemize}
+    \item \textbf{Time Complexity: $\mathbf{O(V^3)}$}. We iterate $V$ loops to update for every pair of $(i, j)$.
+    \item \textbf{Space Complexity: $\mathbf{O(V^2)}$}. We only use a 2D matrix to store the distance between every pair of vertices.
+\end{itemize}
+
+\subsubsection{How to track the path?}
+By introducing a \texttt{next} 2D matrix, where \texttt{next[i][j]} denotes the next node from $i$ when routing to $j$. We initialize \texttt{next[i][j] = j} if there is a direct connection or \texttt{next[i][j] = -1}. After initializing, in the main loop, we update the \texttt{next} matrix as well as the distance:
+
+\begin{algorithm}[H]
+\begin{algorithmic}[1]
+\If{$dist[i][k] + dist[k][j] < dist[i][j]$}
+    \State $dist[i][j] \gets dist[i][k] + dist[k][j]$
+    \State $next[i][j] \gets k$
+\EndIf
+\end{algorithmic}
+\end{algorithm}
+        
+Then when we need to track the path, we can route from the start to end through the \texttt{next} matrix.

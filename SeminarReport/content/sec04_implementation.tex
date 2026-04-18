@@ -1,3 +1,34 @@
 \section{Implementation Notes \& Complexity}
 
-% Member 2 writes content here (Time and space complexity analysis of the algorithms)...
+\subsection{Implementation Notes}
+Our implementation is organized around a common graph interface (\texttt{IGraphStructure}) and multiple concrete graph representations.
+
+\begin{itemize}
+	\item \textbf{Graph abstraction:} \texttt{IGraphStructure} provides a unified API so all shortest path methods can run on either adjacency list or adjacency matrix.
+	\item \textbf{Heap implementation update:}
+	Dijkstra-related methods now rely on dedicated heap headers in \texttt{SourceCode/Heap/}, including \texttt{IndexedPriorityQueue} (eager Dijkstra) and \texttt{IndexedDaryHeap} (D-ary optimized Dijkstra).
+	\item \textbf{Primary runtime choice:} Benchmarking is executed on \texttt{AdjacencyList} because the provided datasets are sparse to medium-density and edge traversal dominates runtime.
+	\item \textbf{Two-phase loading for large files:}
+	The loader first scans the file to estimate vertex range and metadata, then performs a second pass to build the graph. This avoids repeated graph resizing during insertion.
+	\item \textbf{Input robustness:}
+	Each edge line can be either \texttt{u v} or \texttt{u v w}. Missing weights default to $1$.
+	\item \textbf{Practical runtime controls:}
+	Floyd-Warshall is run on a bounded induced subgraph (first $k$ vertices), and heavy algorithms can be skipped via command flags for large-scale datasets.
+\end{itemize}
+
+\subsection{Complexity Notes in Practice}
+Theoretical complexities are summarized in Section 2. In implementation, the observed behavior is consistent with those bounds:
+
+\begin{itemize}
+	\item \textbf{Dijkstra variants:} Fast on non-negative sparse graphs due to heap-based relaxations (binary heap, indexed priority queue, and indexed D-ary heap).
+	\item \textbf{Bellman-Ford:} Significantly heavier for large edge sets because each full relaxation pass touches all edges.
+	\item \textbf{Floyd-Warshall:} Cubic in vertices, therefore limited to a bounded subset for benchmark practicality.
+\end{itemize}
+
+\subsection{Engineering Trade-offs}
+\begin{itemize}
+	\item \textbf{Adjacency List vs Matrix:}
+	Adjacency list reduces memory for sparse graphs and is preferred for SSSP workloads; adjacency matrix is simpler for APSP semantics but grows as $O(V^2)$ in memory.
+	\item \textbf{Benchmark fidelity vs runtime budget:}
+	We keep full algorithm coverage, but expose skip options so seminar demonstrations remain responsive.
+\end{itemize}

@@ -9,23 +9,18 @@ Dan Bernstein.
 {Eraser.io}.
 \newblock Eraser diagram tool.
 \newblock \url{https://eraser.io/}, 2025.
-\newblock Online tool used to design UML diagrams and system architecture
-  illustrations.
+\newblock Online tool used to design UML diagrams and system architecture illustrations.
 
 \bibitem{google_gemini}
 {Google}.
 \newblock Gemini.
 \newblock \url{https://gemini.google.com/}, 2025.
-\newblock Generative AI model used to support progress tracking, multithreading
-  concepts, cross-platform implementation, code refactoring, and report
-  writing.
+\newblock Generative AI model used to support progress tracking, multithreading concepts, cross-platform implementation, code refactoring, and report writing.
 
 \bibitem{openai_chatgpt}
 {OpenAI}.
 \newblock Chatgpt.
 \newblock \url{https://chat.openai.com/}, 2025.
-\newblock AI assistant used to help draft technical reports, convert content to
-  LaTeX, and format tables, diagrams, and documentation based on
-  student-provided input.
+\newblock AI assistant used to help draft technical reports, convert content to LaTeX, and format tables, diagrams, and documentation based on student-provided input.
 
 \end{thebibliography}
