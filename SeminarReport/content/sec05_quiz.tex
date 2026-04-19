@@ -1,3 +1,76 @@
 \section{Quiz}
 
 % Member 4 lists the Kahoot/Quizizz multiple-choice questions here...
+\label{sec:quiz}
+
+This section evaluates the comprehension of various shortest path algorithms, their complexities, and appropriate use cases.
+
+\begin{enumerate}[label=\arabic*., itemsep=1.5em]
+
+    % Question 1
+    \item \textbf{Question:} In the \textbf{A* search algorithm's} evaluation function $f(n) = g(n) + h(n)$, what exactly does $h(n)$ represent?
+    \begin{enumerate}[label=\Alph*.]
+        \item The exact accumulated cost from the start node to node $n$.
+        \item The total number of edges traversed so far.
+        \item The estimated cost from node $n$ to the destination.
+        \item The time complexity of evaluating the current node.
+    \end{enumerate}
+    \textbf{Answer:} C \\
+    \textbf{Explanation:} In the A* algorithm, $g(n)$ represents the exact path cost from the starting node to the current node $n$. Meanwhile, $h(n)$ is the heuristic function that estimates the optimal cost from node $n$ to the goal. This combination enables A* to prioritize nodes that are likely to lead to the most efficient path.
+
+    % Question 2
+    \item \textbf{Question:} Why does \textbf{Dijkstra's algorithm} fail to find the correct shortest path in graphs with negative edge weights?
+    \begin{enumerate}[label=\Alph*.]
+        \item The priority queue data structure cannot process negative integer values.
+        \item It greedily marks nodes as "visited" under the assumption that path costs can never decrease.
+        \item Negative edges immediately crash the algorithm due to division by zero errors.
+        \item It relies on a heuristic function that strictly requires positive inputs.
+    \end{enumerate}
+    \textbf{Answer:} B \\
+    \textbf{Explanation:} Dijkstra's algorithm fundamentally relies on the greedy property that adding an edge to a path can only increase or maintain its total length. Once a node is extracted from the priority queue and marked as visited, its shortest distance is finalized. Negative weights violate this assumption, as a path could theoretically become shorter later in the traversal.
+
+    % Question 3
+    \item \textbf{Question:} What are the standard time and space complexities of the \textbf{Floyd-Warshall algorithm}, respectively (where $V$ is the number of vertices and $E$ is the number of edges)?
+    \begin{enumerate}[label=\Alph*.]
+        \item Time: $\mathcal{O}(V^2)$, Space: $\mathcal{O}(V^3)$
+        \item Time: $\mathcal{O}(V^3)$, Space: $\mathcal{O}(V^2)$
+        \item Time: $\mathcal{O}(E \log V)$, Space: $\mathcal{O}(V)$
+        \item Time: $\mathcal{O}(V^2 \log E)$, Space: $\mathcal{O}(V^2)$
+    \end{enumerate}
+    \textbf{Answer:} B \\
+    \textbf{Explanation:} The algorithm uses three nested loops to iterate through all possible intermediate vertices for every pair of source and destination vertices, leading to a time complexity of $\mathcal{O}(V^3)$. Additionally, it requires a 2D distance matrix of size $V \times V$ to store the shortest paths, resulting in a space complexity of $\mathcal{O}(V^2)$.
+
+    % Question 4
+    \item \textbf{Question:} A graph has negative edges. To use Dijkstra's algorithm, a student adds a constant $C$ to \textbf{ALL} edges to make them non-negative ($\ge 0$), runs Dijkstra's, and subtracts the accumulated constant later. Is this method correct or incorrect, and why?
+    \begin{enumerate}[label=\Alph*.]
+        \item Excellent, absolutely correct. This is a classic graph transformation technique that leverages Dijkstra's speed without distorting the final result.
+        \item Incorrect. Altering the weights by adding a constant will introduce hidden negative cycles into the graph, causing Dijkstra's algorithm to fall into an infinite loop.
+        \item Acceptable, but the graph must be strictly undirected. If it is a directed graph, adding a constant will reverse the traversal direction.
+        \item A fundamental flaw. Adding a constant $C$ to every edge heavily penalizes paths made up of a larger number of edges, completely invalidating the calculation.
+    \end{enumerate}
+    \textbf{Answer:} D \\
+    \textbf{Explanation:} Suppose Path 1 consists of 1 edge (weight 10), and Path 2 consists of 3 edges (total weight 6). Originally, Path 2 is the shortest. If we add $C = 5$ to all edges: Path 1 becomes 15, and Path 2 becomes $6 + (3 \times 5) = 21$. Suddenly, Path 1 appears shorter. The constant addition distorts the graph's relative distances.
+
+    % Question 5
+    \item \textbf{Question:} You manage a regional delivery network. A customer requests a pickup. You need to find the most efficient route from \textit{any} of your multiple local branches to this single customer's location to dispatch a driver. \textbf{Which category of shortest-path problem are you solving?}
+    \begin{enumerate}[label=\Alph*.]
+        \item Single-Source Shortest Path (SSSP)
+        \item Single-Pair Shortest Path (SPSP)
+        \item All-Pairs Shortest Path (APSP)
+        \item Multi-Source Shortest Path (MSSP)
+    \end{enumerate}
+    \textbf{Answer:} D \\
+    \textbf{Explanation:} The scenario requires finding the optimal path from multiple potential starting points (the local branches) to a single destination. This is a classic Multi-Source problem. It can be elegantly solved by introducing a virtual "Super Source" connected to all local branches with zero-weight edges, then running an SSSP algorithm from that Super Source.
+
+    % Question 6
+    \item \textbf{Question:} Assume the current shortest path from Node A to Node B uses 5 edges, while an alternative path uses only 2 edges (but has a slightly higher total weight). If a new toll tax of $+\$10$ is added to \textit{every single edge} in the graph, \textbf{what might happen?}
+    \begin{enumerate}[label=\Alph*.]
+        \item The shortest path is guaranteed to remain exactly the same.
+        \item The algorithm will crash because the graph's topology was altered.
+        \item The alternative path (with 2 edges) might become the new shortest path.
+        \item The total cost of all paths will increase by exactly $\$10$.
+    \end{enumerate}
+    \textbf{Answer:} C \\
+    \textbf{Explanation:} Adding a uniform constant weight to all edges disproportionately impacts paths containing a larger number of edges. The cost of the original path increases by $5 \times \$10 = \$50$, whereas the alternative path only increases by $2 \times \$10 = \$20$. If the original weight difference between the two paths was less than $\$30$, the 2-edge path will now be strictly shorter.
+
+\end{enumerate}
