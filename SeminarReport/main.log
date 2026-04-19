@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.17)  19 APR 2026 09:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.17)  19 APR 2026 15:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1033,7 +1033,7 @@ Package pgfplots notification 'compat/show suggested version=true': you might be
 
 \c@lstlisting=\count399
 (content/title.tex
-<img/hcmus-logo.png, id=230, 597.9138pt x 597.9138pt>
+<img/hcmus-logo.png, id=254, 597.9138pt x 597.9138pt>
 File: img/hcmus-logo.png Graphic file (type png)
 <use img/hcmus-logo.png>
 Package pdftex.def Info: img/hcmus-logo.png  used on input line 38.
@@ -1053,11 +1053,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has b
 <to be read again> 
                    \relax 
 l.31 ...per Source Simulation}{27}{subsection.5.1}
-                                                  % [1])
+                                                  % [1] [2])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [2] [3] (content/03_group_info.tex [1]) (content/sec01_introduction.tex [2]) (content/sec02_algorithms.tex
+ [3] (content/03_group_info.tex [1]) (content/sec01_introduction.tex [2]) (content/sec02_algorithms.tex
 Overfull \hbox (28.14891pt too wide) in paragraph at lines 12--13
 \T5/cmr/m/n/12 men-tal ap-pli-ca-tion of graph the-ory rather than a sin-gle named al-go-rithm, its core mech-a-nism^^VTopological
  []
@@ -1071,43 +1071,43 @@ File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T5/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `T5/cmtt/m/n' tried instead on input line 68.
-<img/DAGs1.png, id=334, 934.49126pt x 730.73pt>
+<img/DAGs1.png, id=364, 934.49126pt x 730.73pt>
 File: img/DAGs1.png Graphic file (type png)
 <use img/DAGs1.png>
 Package pdftex.def Info: img/DAGs1.png  used on input line 73.
 (pdftex.def)             Requested size: 430.00958pt x 336.25137pt.
  [5] [6 <./img/DAGs1.png>]
-<img/DAGs2.png, id=355, 879.285pt x 780.9175pt>
+<img/DAGs2.png, id=385, 879.285pt x 780.9175pt>
 File: img/DAGs2.png Graphic file (type png)
 <use img/DAGs2.png>
 Package pdftex.def Info: img/DAGs2.png  used on input line 100.
 (pdftex.def)             Requested size: 430.00958pt x 381.90222pt.
  [7 <./img/DAGs2.png>] [8] [9]
-<img/Dijkstra.png, id=375, 825.83531pt x 560.0925pt>
+<img/Dijkstra.png, id=405, 825.83531pt x 560.0925pt>
 File: img/Dijkstra.png Graphic file (type png)
 <use img/Dijkstra.png>
 Package pdftex.def Info: img/Dijkstra.png  used on input line 202.
 (pdftex.def)             Requested size: 430.00958pt x 291.6429pt.
  [10] [11 <./img/Dijkstra.png>] [12] [13] [14]
-<img/bellmanford1.png, id=409, 813.0375pt x 469.755pt>
+<img/bellmanford1.png, id=439, 813.0375pt x 469.755pt>
 File: img/bellmanford1.png Graphic file (type png)
 <use img/bellmanford1.png>
 Package pdftex.def Info: img/bellmanford1.png  used on input line 318.
 (pdftex.def)             Requested size: 430.00958pt x 248.44571pt.
  [15] [16 <./img/bellmanford1.png>]
-<img/bellmanford2.png, id=424, 782.925pt x 459.21562pt>
+<img/bellmanford2.png, id=454, 782.925pt x 459.21562pt>
 File: img/bellmanford2.png Graphic file (type png)
 <use img/bellmanford2.png>
 Package pdftex.def Info: img/bellmanford2.png  used on input line 350.
 (pdftex.def)             Requested size: 430.00958pt x 252.21901pt.
  [17 <./img/bellmanford2.png>] [18] [19]
-<img/floyd1.png, id=442, 1391.1975pt x 718.685pt>
+<img/floyd1.png, id=472, 1391.1975pt x 718.685pt>
 File: img/floyd1.png Graphic file (type png)
 <use img/floyd1.png>
 Package pdftex.def Info: img/floyd1.png  used on input line 450.
 (pdftex.def)             Requested size: 430.00958pt x 222.13206pt.
  [20 <./img/floyd1.png>]
-<img/floyd2.png, id=453, 1360.08125pt x 766.865pt>
+<img/floyd2.png, id=483, 1360.08125pt x 766.865pt>
 File: img/floyd2.png Graphic file (type png)
 <use img/floyd2.png>
 Package pdftex.def Info: img/floyd2.png  used on input line 466.
@@ -1117,13 +1117,13 @@ Overfull \hbox (2.11067pt too wide) in paragraph at lines 479--480
 []\T5/cmr/bx/n/12 Further Up-dates: \T5/cmr/m/n/12 Sim-i-larly, the cell \T5/cmtt/m/n/12 dist[1][3] \T5/cmr/m/n/12 is up-dated from $\OMS/cmsy/m/n/12 1$ \T5/cmr/m/n/12 to $\OT1/cmr/m/n/12 6$ \T5/cmr/m/n/12 be-cause \T5/cmtt/m/n/12 dist[1][0]
  []
 
-<img/floyd3.png, id=454, 1349.04pt x 760.8425pt>
+<img/floyd3.png, id=484, 1349.04pt x 760.8425pt>
 File: img/floyd3.png Graphic file (type png)
 <use img/floyd3.png>
 Package pdftex.def Info: img/floyd3.png  used on input line 484.
 (pdftex.def)             Requested size: 430.00958pt x 242.51099pt.
 [21 <./img/floyd2.png>]
-<img/floyd4.png, id=465, 1315.91624pt x 683.55376pt>
+<img/floyd4.png, id=495, 1315.91624pt x 683.55376pt>
 File: img/floyd4.png Graphic file (type png)
 <use img/floyd4.png>
 Package pdftex.def Info: img/floyd4.png  used on input line 498.
@@ -1133,7 +1133,7 @@ Overfull \hbox (30.33238pt too wide) in paragraph at lines 8--10
 \T5/cmr/m/n/12 ers in \T5/cmtt/m/n/12 SourceCode/Heap/\T5/cmr/m/n/12 , in-clud-ing \T5/cmtt/m/n/12 IndexedPriorityQueue \T5/cmr/m/n/12 (ea-ger Di-jk-stra) and \T5/cmtt/m/n/12 IndexedDaryHeap
  []
 
-[29]) (content/sec04_applications.tex) (content/sec05_quiz.tex) (content/sec06_assignments.tex) (content/sec07_source_codes.tex [30]
+[29]) (content/sec04_applications.tex [30]) [31] (content/sec05_quiz.tex [32] [33] [34]) (content/sec06_assignments.tex [35] [36] [37] [38] [39] [40] [41]) (content/sec07_source_codes.tex [42]
 Overfull \hbox (57.90375pt too wide) in paragraph at lines 21--22
 []\T5/cmr/m/n/12 Datasets: \T5/cmtt/m/n/12 dataset1_sparse_large.txt\T5/cmr/m/n/12 , \T5/cmtt/m/n/12 dataset2_dense_medium.txt\T5/cmr/m/n/12 , \T5/cmtt/m/n/12 dataset3_complete_apsp.txt\T5/cmr/m/n/12 ,
  []
@@ -1143,7 +1143,7 @@ Overfull \hbox (60.60464pt too wide) in paragraph at lines 22--23
 []\T5/cmr/m/n/12 Benchmark logs: \T5/cmtt/m/n/12 bench_dataset1_sparse_large_boost.log \T5/cmr/m/n/12 to \T5/cmtt/m/n/12 bench_dataset5_dag_sssp_boost.log\T5/cmr/m/n/12 . 
  []
 
-[31] [32] [33]
+[43] [44] [45]
 Overfull \hbox (7.08435pt too wide) in paragraph at lines 151--152
 []\T5/cmr/bx/n/12 DAG bench-mark note: \T5/cmr/m/n/12 for DAG in-puts, the bench-mark re-ports both the orig-i-nal \T5/cmtt/m/n/12 dagShortestPath
  []
@@ -1153,12 +1153,12 @@ Overfull \hbox (1.24998pt too wide) in paragraph at lines 151--152
 \T5/cmr/m/n/12 im-ple-men-ta-tion and the fairer \T5/cmtt/m/n/12 dagShortestPath (precomputed topo order) \T5/cmr/m/n/12 vari-ant, which reuses
  []
 
-[34]) (content/sec08_datasets.tex
+) (content/sec08_datasets.tex [46]
 Overfull \hbox (139.49141pt too wide) in paragraph at lines 7--22
  [] 
  []
 
-[35]) (content/sec09_comparison.tex) (ref/ref.tex [36] (main.bbl) [37
+[47]) (content/sec09_comparison.tex) (ref/ref.tex [48] (main.bbl) [49
 
 ]) (main.aux)
  ***********
@@ -1166,20 +1166,20 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 58CD628F1FED5AE5B71745A8F6BF3A1E;11006.
+(rerunfilecheck)             Checksum: 6643A7AD69C621AFC709E7117731929B;12458.
  ) 
 Here is how much of TeX's memory you used:
- 39380 strings out of 467691
- 899498 string characters out of 5413499
- 1437232 words of memory out of 5000000
- 67557 multiletter control sequences out of 15000+600000
- 653740 words of font info for 92 fonts, out of 8000000 for 9000
+ 39455 strings out of 467691
+ 900311 string characters out of 5413499
+ 1437471 words of memory out of 5000000
+ 67575 multiletter control sequences out of 15000+600000
+ 655705 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 132i,12n,135p,815b,696s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 132i,12n,135p,889b,696s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Anh Kiet\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vncsc10.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr17.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on main.pdf (41 pages, 1867996 bytes).
+Output written on main.pdf (53 pages, 1910598 bytes).
 PDF statistics:
- 667 PDF objects out of 1000 (max. 8388607)
- 174 named destinations out of 1000 (max. 500000)
- 511 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 802 PDF objects out of 1000 (max. 8388607)
+ 229 named destinations out of 1000 (max. 500000)
+ 559 words of extra memory for PDF output out of 10000 (max. 10000000)
 

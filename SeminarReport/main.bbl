@@ -5,6 +5,13 @@ Dan Bernstein.
 \newblock Hash functions (djb2) - comp.lang.c usenet, 1991.
 \newblock Accessed: 2025-12-28.
 
+\bibitem{cses_flight_discount}
+{CSES Problem Set}.
+\newblock {Flight Discount}.
+\newblock \url{https://cses.fi/problemset/task/1195/}, 2026.
+\newblock Programming problem used to demonstrate Dijkstra's algorithm on a
+  state-space graph.
+
 \bibitem{eraser_io}
 {Eraser.io}.
 \newblock Eraser diagram tool.
@@ -20,6 +27,15 @@ Dan Bernstein.
   concepts, cross-platform implementation, code refactoring, and report
   writing.
 
+\bibitem{leetcode_binary_matrix}
+{LeetCode}.
+\newblock {1091. Shortest Path in Binary Matrix}.
+\newblock
+  \url{https://leetcode.com/problems/shortest-path-in-binary-matrix/description/},
+  2026.
+\newblock Programming problem used to demonstrate the A* search algorithm on a
+  2D grid.
+
 \bibitem{openai_chatgpt}
 {OpenAI}.
 \newblock Chatgpt.
@@ -27,5 +43,12 @@ Dan Bernstein.
 \newblock AI assistant used to help draft technical reports, convert content to
   LaTeX, and format tables, diagrams, and documentation based on
   student-provided input.
+
+\bibitem{vnoj_dhserv}
+{VNOI Online Judge}.
+\newblock {Dịch vụ truyền thông (dhserv)}.
+\newblock \url{https://oj.vnoi.info/problem/dhserv}, 2026.
+\newblock Programming problem used to demonstrate the dynamic implementation of
+  the Floyd-Warshall algorithm.
 
 \end{thebibliography}

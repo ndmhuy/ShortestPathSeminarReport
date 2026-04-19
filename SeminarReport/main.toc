@@ -35,23 +35,33 @@
 \contentsline {subsection}{\numberline {6.2}Complexity Notes in Practice}{30}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}Engineering Trade-offs}{30}{subsection.6.3}%
 \contentsline {section}{\numberline {7}Applications}{30}{section.7}%
-\contentsline {section}{\numberline {8}Quiz}{30}{section.8}%
-\contentsline {section}{\numberline {9}Programming Assignments}{30}{section.9}%
-\contentsline {section}{\numberline {10}Source Codes \& Instructions}{30}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Dependencies}{31}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}What Is Included}{31}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Input Graph Format}{31}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}Compile Instructions (Maximum Optimization)}{31}{subsection.10.4}%
-\contentsline {subsubsection}{\numberline {10.4.1}macOS (clang++)}{32}{subsubsection.10.4.1}%
-\contentsline {subsubsection}{\numberline {10.4.2}Windows (MSYS2/MinGW-w64 g++)}{32}{subsubsection.10.4.2}%
-\contentsline {subsubsection}{\numberline {10.4.3}Windows (MSVC cl)}{33}{subsubsection.10.4.3}%
-\contentsline {subsection}{\numberline {10.5}Run Workflow (After Compilation)}{33}{subsection.10.5}%
-\contentsline {subsection}{\numberline {10.6}Generate the Benchmark Datasets}{35}{subsection.10.6}%
-\contentsline {subsection}{\numberline {10.7}Generate the DAG Benchmark Dataset}{35}{subsection.10.7}%
-\contentsline {section}{\numberline {11}Datasets}{35}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Dataset Suite}{35}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}Dataset Files}{35}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}Header Format}{36}{subsection.11.3}%
-\contentsline {subsection}{\numberline {11.4}Benchmark Interpretation}{36}{subsection.11.4}%
-\contentsline {section}{\numberline {12}Comparison}{36}{section.12}%
-\contentsline {section}{References}{37}{section*.2}%
+\contentsline {subsection}{\numberline {7.1}General Applications}{30}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Specific Problem Applications}{31}{subsection.7.2}%
+\contentsline {paragraph}{Single-Source Shortest Path (SSSP)}{31}{section*.2}%
+\contentsline {paragraph}{Single-Pair Shortest Path}{31}{section*.3}%
+\contentsline {paragraph}{All-Pairs Shortest Path (APSP)}{31}{section*.4}%
+\contentsline {paragraph}{Multi-Source Shortest Path}{31}{section*.5}%
+\contentsline {section}{\numberline {8}Quiz}{32}{section.8}%
+\contentsline {section}{\numberline {9}Programming Assignments}{35}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Problem 1: Communication Service (VNOJ)}{35}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Problem 2: Flight Discount (CSES)}{37}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Problem 3: Shortest Path in Binary Matrix (LeetCode)}{39}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Problem 4: Nearest Fire Station}{40}{subsection.9.4}%
+\contentsline {section}{\numberline {10}Source Codes \& Instructions}{42}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Dependencies}{42}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}What Is Included}{43}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Input Graph Format}{43}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Compile Instructions (Maximum Optimization)}{43}{subsection.10.4}%
+\contentsline {subsubsection}{\numberline {10.4.1}macOS (clang++)}{43}{subsubsection.10.4.1}%
+\contentsline {subsubsection}{\numberline {10.4.2}Windows (MSYS2/MinGW-w64 g++)}{44}{subsubsection.10.4.2}%
+\contentsline {subsubsection}{\numberline {10.4.3}Windows (MSVC cl)}{44}{subsubsection.10.4.3}%
+\contentsline {subsection}{\numberline {10.5}Run Workflow (After Compilation)}{45}{subsection.10.5}%
+\contentsline {subsection}{\numberline {10.6}Generate the Benchmark Datasets}{46}{subsection.10.6}%
+\contentsline {subsection}{\numberline {10.7}Generate the DAG Benchmark Dataset}{47}{subsection.10.7}%
+\contentsline {section}{\numberline {11}Datasets}{47}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Dataset Suite}{47}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Dataset Files}{47}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Header Format}{47}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Benchmark Interpretation}{48}{subsection.11.4}%
+\contentsline {section}{\numberline {12}Comparison}{48}{section.12}%
+\contentsline {section}{References}{49}{section*.6}%

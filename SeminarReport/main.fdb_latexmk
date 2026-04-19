@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1776566543.53855 "main.aux" "main.bbl" "main" 1776566796.96536 0
-  "./ref/ref.bib" 1776404563 1173 c97dd552e4fa71950ca1f22da309b5a9 ""
+["bibtex main"] 1776586367.20603 "main.aux" "main.bbl" "main" 1776586370.12586 0
+  "./ref/ref.bib" 1776586360 2197 18158ccefa14507157e7cf7a2a78a30c ""
   "C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/bibtex/bst/bibtex/plain.bst" 1291864736 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1776566796 12721 3edc75cfb99de8f0d32629e810f0fbcf "pdflatex"
+  "main.aux" 1776586369 14318 1539f162cc14718e87823814c17b5549 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1776566793.85732 "c:/Users/Anh Kiet/source/repos/ShortestPathSeminarReport/SeminarReport/main.tex" "main.pdf" "main" 1776566796.96586 0
+["pdflatex"] 1776586367.41553 "c:/Users/Anh Kiet/source/repos/ShortestPathSeminarReport/SeminarReport/main.tex" "main.pdf" "main" 1776586370.12641 0
   "C:/Users/Anh" 1756024653 17295 eb58e5f8b6874eb6e8907acbfae11641 ""
   "C:/Users/Anh Kiet/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1776409362 88371 b965f57369ed322039596060d18f4416 ""
   "C:/Users/Anh Kiet/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1776536499 14064 cb522b4e1a5c27520b61ad6ecca6310c ""
@@ -34,6 +34,8 @@
   "C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy6.tfm" 1136765053 1116 933a60c408fc0a863a92debe84b2d294 ""
   "C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmsy8.tfm" 1136765053 1120 8b7d695260f3cff42e636090a8002094 ""
   "C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/tfm/vntex/vnr/vnbx12.tfm" 1644004041 4020 c48f3c7e11edde839ff6260300faa1bb ""
+  "C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/tfm/vntex/vnr/vnbx6.tfm" 1644004041 4032 042f0219ddcb651b3b6e28557abd8e23 ""
+  "C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/tfm/vntex/vnr/vnbx8.tfm" 1644004041 4020 6abf34572ede80ad8a14d942cbeaefcc ""
   "C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/tfm/vntex/vnr/vncsc10.tfm" 1644004041 3328 915efe5837c0b39f09836cbf8f322602 ""
   "C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/tfm/vntex/vnr/vnr10.tfm" 1644004041 3980 a378198bbdb2c6fcd4b722396a62ad27 ""
   "C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/tfm/vntex/vnr/vnr12.tfm" 1644004041 3984 be7b630197255361b12d153ce5e1bc5b ""
@@ -280,9 +282,9 @@
   "content/sec01_introduction.tex" 1776536493 3011 5d376cbc8c81ca2a823ea3e67c7a37f3 ""
   "content/sec02_algorithms.tex" 1776566461 40716 3229a50f0587ffd6a61fa444333083f4 ""
   "content/sec03_implementation.tex" 1776539231 2473 f51b7b6d69f6843c99e18a792edb0e29 ""
-  "content/sec04_applications.tex" 1776524917 121 7938aef479c4aca50f7499e846fb2e27 ""
-  "content/sec05_quiz.tex" 1776524917 89 222ab69022d10b02d42046d15a4a81d9 ""
-  "content/sec06_assignments.tex" 1776524917 126 348ef557a0b0b401602b9a160f1819a1 ""
+  "content/sec04_applications.tex" 1776586360 3537 f7417cb0cf05204d6fb6d27e6e06eb0b ""
+  "content/sec05_quiz.tex" 1776586360 6680 f8854dd55de76ed0ef6f2a4d7a14c3d2 ""
+  "content/sec06_assignments.tex" 1776586360 12897 4fdb1955063b72e0ecef7e1338bcd899 ""
   "content/sec07_source_codes.tex" 1776539227 6555 97175a874f4dad9e2c31ff651e161fef ""
   "content/sec08_datasets.tex" 1776524917 1926 bd355e5ba97fac3bf6ccdf30f98f9ed3 ""
   "content/sec09_comparison.tex" 1776524917 126 6b669417caebee07addcdec6d510ec9e ""
@@ -298,11 +300,11 @@
   "img/floyd3.png" 1776566306 199637 017be561c51c2f7de4ba9446e6f051ff ""
   "img/floyd4.png" 1776566331 200873 b4ac485deb6b0186c23d5d71023db1e4 ""
   "img/hcmus-logo.png" 1776404563 258629 122747e63e393f11b7f15571540c7d20 ""
-  "main.aux" 1776566796 12721 3edc75cfb99de8f0d32629e810f0fbcf "pdflatex"
-  "main.bbl" 1776566543 942 f5312649cf97dcc329f9cb281a80ad31 "bibtex main"
-  "main.out" 1776566796 11006 58cd628f1fed5ae5b71745a8f6bf3a1e "pdflatex"
+  "main.aux" 1776586369 14318 1539f162cc14718e87823814c17b5549 "pdflatex"
+  "main.bbl" 1776586367 1756 38e3c2cb12c6c352779c1835e2931b84 "bibtex main"
+  "main.out" 1776586369 12458 6643a7ad69c621afc709e7117731929b "pdflatex"
   "main.tex" 1776566793 2537 9a206bec8fb9328d013f14cdf3f6b471 ""
-  "main.toc" 1776566796 5305 53d0c3f472b28e45e729abe99f51c954 "pdflatex"
+  "main.toc" 1776586369 6206 7d28c9e3e23cd329252ec986b377b26e "pdflatex"
   "ref/ref.tex" 1776404563 275 2c3dab62d972a92fcdf3915a36ddca60 ""
   (generated)
   "main.aux"
