@@ -17,6 +17,13 @@ Thomas~H. Cormen, Charles~E. Leiserson, Ronald~L. Rivest, and Clifford Stein.
 \newblock MIT Press, 4th edition, 2022.
 \newblock Foundational logic for Dijkstra, Bellman-Ford, and Floyd-Warshall.
 
+\bibitem{croes_bioinformatics}
+Didier Croes, Fabien Couche, Shoshana~J. Wodak, and Jacques van Helden.
+\newblock {Inferring Meaningful Pathways in Weighted Metabolic Networks}.
+\newblock {\em Journal of Molecular Biology}, 356(1):222--236, 2006.
+\newblock Application of graph theory and shortest path routing in
+  bioinformatics and metabolic networks.
+
 \bibitem{cses_flight_discount}
 {CSES Problem Set}.
 \newblock {Flight Discount}.
@@ -72,6 +79,13 @@ Arthur~B. Kahn.
 \newblock {\em Communications of the ACM}, 1962.
 \newblock Mathematical basis for the DAG-SSSP implementation.
 
+\bibitem{lavalle_planning}
+Steven~M. LaValle.
+\newblock {\em {Planning Algorithms}}.
+\newblock Cambridge University Press, 2006.
+\newblock Comprehensive textbook detailing shortest path algorithms applied to
+  robotics and motion planning.
+
 \bibitem{leetcode_binary_matrix}
 {LeetCode}.
 \newblock {1091. Shortest Path in Binary Matrix}.
@@ -80,6 +94,21 @@ Arthur~B. Kahn.
   2026.
 \newblock Programming problem used to demonstrate the A* search algorithm on a
   2D grid.
+
+\bibitem{rfc2328_ospf}
+John Moy.
+\newblock {OSPF Version 2}.
+\newblock Request for Comments 2328, Internet Engineering Task Force (IETF),
+  1998.
+\newblock Standard specification for the OSPF link-state routing protocol using
+  Dijkstra's algorithm.
+
+\bibitem{pallis_cdn}
+George Pallis and Athena Vakali.
+\newblock {Insight and Perspectives for Content Delivery Networks}.
+\newblock {\em Communications of the ACM}, 49(1):101--106, 2006.
+\newblock Analysis of request routing and multi-source distance optimization in
+  CDNs.
 
 \bibitem{vnoj_dhserv}
 {VNOI Online Judge}.
