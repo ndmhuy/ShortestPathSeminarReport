@@ -1,3 +1,274 @@
 \section{Programming Assignments}
 
 % Member 4 writes content here (List of LeetCode/CSES problems and their editorials)...
+% --- Section 9: Programming Assignments --
+\label{sec:prog_assignments}
+
+This section outlines practical programming challenges designed to test the application of shortest path algorithms in complex scenarios. For each problem, an editorial strategy and pseudocode are provided to guide the implementation.
+
+% -------------------------
+% Problem 1
+% -------------------------
+\subsection{Problem 1: Communication Service (VNOJ)}
+
+\textbf{1. Detailed Problem Description:}
+A telecommunications company has established a network consisting of directed channels with specific transmission delays. Initially, all routing nodes in the network are inactive and cannot forward messages. The system receives a sequence of queries where a node can dynamically be activated, or a request is made to find the minimum delay path between two nodes using \textit{only} the currently active nodes as intermediaries. 
+
+\textbf{2. Given (Input):}
+\begin{itemize}
+    \item A directed graph with $n$ nodes and $m$ edges, where each edge has a positive delay weight $c(u, v)$.
+    \item $k$ dynamic operations of two types:
+    \begin{itemize}
+        \item \textbf{Type 1:} Activate node $x$.
+        \item \textbf{Type 2:} Query the shortest path delay from node $x$ to node $y$.
+    \end{itemize}
+\end{itemize}
+
+\textbf{3. Requirement (Output):}
+For every Type 2 query, output the minimum transmission delay. If no valid path exists through currently active nodes, output $-1$.
+
+\textbf{4. Core Algorithm:} 
+Dynamic Implementation of the \textbf{Floyd-Warshall Algorithm}.
+
+\textbf{5. Editorial Strategy \& Pseudocode (Hint):}
+Instead of running a shortest path algorithm for every query, we can leverage the outermost loop of the Floyd-Warshall algorithm. When a Type 1 query activates node $x$, we treat $x$ as the new intermediate node and update the entire adjacency matrix.
+
+\vspace{0.5em}
+\noindent\rule{\textwidth}{0.6pt}
+\begin{algorithmic}[1]
+\State \textbf{Initialize} 2D array $dist[n][n] \gets \infty$
+\For{each edge $u \to v$ with weight $w$}
+    \State $dist[u][v] \gets \min(dist[u][v], w)$
+\EndFor
+\For{$i \gets 1$ \textbf{to} $n$}
+    \State $dist[i][i] \gets 0$
+\EndFor
+\Statex
+\For{each $query \in queries$}
+    \If{$query$ is Type 1 (activate node $x$)}
+        \For{$i \gets 1$ \textbf{to} $n$}
+            \For{$j \gets 1$ \textbf{to} $n$}
+                \If{$dist[i][x] + dist[x][j] < dist[i][j]$}
+                    \State $dist[i][j] \gets dist[i][x] + dist[x][j]$
+                \EndIf
+            \EndFor
+        \EndFor
+    \ElsIf{$query$ is Type 2 (query path $x \to y$)}
+        \If{$dist[x][y] = \infty$}
+            \State \textbf{print} $-1$
+        \Else
+            \State \textbf{print} $dist[x][y]$
+        \EndIf
+    \EndIf
+\EndFor
+\end{algorithmic}
+\vspace{-0.5em}
+\noindent\rule{\textwidth}{0.6pt}
+\vspace{0.5em}
+
+\textbf{6. Complexity Analysis:}
+\begin{itemize}
+    \item \textbf{Time Complexity:} $\mathcal{O}(N^2)$ for each Type 1 query (updating the matrix), and $\mathcal{O}(1)$ for each Type 2 query.
+    \item \textbf{Space Complexity:} $\mathcal{O}(N^2)$ to store the adjacency/distance matrix.
+\end{itemize}
+
+% -------------------------
+% Problem 2
+% -------------------------
+\subsection{Problem 2: Flight Discount (CSES)}
+
+\textbf{1. Detailed Problem Description:}
+You are planning a flight route from a starting city to a destination city. You possess a single discount coupon that allows you to halve the price of exactly one flight along your chosen route (cost becomes $\lfloor x/2 \rfloor$). The objective is to find the absolute minimum cost to reach the destination by strategically deciding where to apply the coupon.
+
+\textbf{2. Given (Input):}
+\begin{itemize}
+    \item $n$ cities and $m$ unidirectional flights.
+    \item A list of flights defined by source $a$, destination $b$, and price $c$.
+    \item Start city is $1$ (Syrjälä) and destination is $n$ (Metsälä).
+\end{itemize}
+
+\textbf{3. Requirement (Output):}
+Print a single integer representing the minimum total price to travel from city $1$ to city $n$ utilizing the discount coupon optimally.
+
+\textbf{4. Core Algorithm:} 
+\textbf{Dijkstra's Algorithm} on a State-Space Graph.
+
+\textbf{5. Editorial Strategy \& Pseudocode (Hint):}
+A standard Dijkstra tracks the shortest distance to each node. Because we have a coupon, a node's state expands into two dimensions: $dist[node][0]$ (cost without coupon) and $dist[node][1]$ (cost with coupon used).
+
+\vspace{0.5em}
+\noindent\rule{\textwidth}{0.6pt}
+\begin{algorithmic}[1]
+\State \textbf{Initialize} $dist[n][2] \gets \infty$
+\State $dist[1][0] \gets 0$
+\State $PQ.\text{push}(\{0, 1, \textbf{false}\})$ \Comment{State: $\{cost, u, used\_coupon\}$}
+\Statex
+\While{$PQ$ is \textbf{not} empty}
+    \State $\{cost, u, used\_coupon\} \gets PQ.\text{pop}()$
+    \If{$cost > dist[u][used\_coupon]$} 
+        \State \textbf{continue} \Comment{Skip stale state}
+    \EndIf
+    \Statex
+    \For{each neighbor $v$ of $u$ with edge weight $w$}
+        \If{$used\_coupon = \textbf{false}$}
+            \If{$cost + w < dist[v][0]$} \Comment{Branch A: Save coupon for later}
+                \State $dist[v][0] \gets cost + w$
+                \State $PQ.\text{push}(\{dist[v][0], v, \textbf{false}\})$
+            \EndIf
+            \If{$cost + \lfloor w / 2 \rfloor < dist[v][1]$} \Comment{Branch B: Use coupon now}
+                \State $dist[v][1] \gets cost + \lfloor w / 2 \rfloor$
+                \State $PQ.\text{push}(\{dist[v][1], v, \textbf{true}\})$
+            \EndIf
+        \ElsIf{$used\_coupon = \textbf{true}$}
+            \If{$cost + w < dist[v][1]$} \Comment{Coupon was already used}
+                \State $dist[v][1] \gets cost + w$
+                \State $PQ.\text{push}(\{dist[v][1], v, \textbf{true}\})$
+            \EndIf
+        \EndIf
+    \EndFor
+\EndWhile
+\State \textbf{return} $dist[n][1]$
+\end{algorithmic}
+\vspace{-0.5em}
+\noindent\rule{\textwidth}{0.6pt}
+\vspace{0.5em}
+
+\textbf{6. Complexity Analysis:}
+\begin{itemize}
+    \item \textbf{Time Complexity:} $\mathcal{O}(E \log V)$ (the graph size is effectively doubled, but standard Dijkstra bounds apply).
+    \item \textbf{Space Complexity:} $\mathcal{O}(V)$ for the $V \times 2$ distance array and priority queue.
+\end{itemize}
+
+% -------------------------
+% Problem 3
+% -------------------------
+\subsection{Problem 3: Shortest Path in Binary Matrix (LeetCode)}
+
+\textbf{1. Detailed Problem Description:}
+You are given a square binary grid representing a map where $0$ indicates a walkable cell and $1$ indicates an obstacle. You must find the shortest clear path from the top-left corner to the bottom-right corner. Movement is allowed in all 8 directions. The path length is defined by the total number of cells visited.
+
+\textbf{2. Given (Input):}
+\begin{itemize}
+    \item An $n \times n$ binary matrix (\texttt{grid}).
+    \item Starting point $(0, 0)$ and target point $(n-1, n-1)$.
+\end{itemize}
+
+\textbf{3. Requirement (Output):}
+Return the length (number of cells) of the shortest clear path. If no such path exists, return $-1$.
+
+\textbf{4. Core Algorithm:} 
+\textbf{A* Search Algorithm} on a Grid.
+
+\textbf{5. Editorial Strategy \& Pseudocode (Hint):}
+We use a priority queue sorted by $f(n) = g(n) + h(n)$. For an 8-directional grid, the Chebyshev distance is the optimal heuristic to guide the search toward the destination efficiently.
+
+\vspace{0.5em}
+\noindent\rule{\textwidth}{0.6pt}
+\begin{algorithmic}[1]
+\Function{Heuristic}{$curr\_x, curr\_y, goal\_x, goal\_y$}
+    \State $dx \gets |curr\_x - goal\_x|$
+    \State $dy \gets |curr\_y - goal\_y|$
+    \State \textbf{return} $\min(dx, dy) + |dx - dy|$
+\EndFunction
+\Statex
+\If{$grid[0][0] = 1$ \textbf{or} $grid[n-1][n-1] = 1$}
+    \State \textbf{return} $-1$
+\EndIf
+\State $PQ.\text{push}(\{\text{Heuristic}(0,0,n-1,n-1) + 1, 1, 0, 0\})$ \Comment{$\{f, g, x, y\}$}
+\State $visited[0][0] \gets \textbf{true}$
+\Statex
+\While{$PQ$ is \textbf{not} empty}
+    \State $\{f, g, x, y\} \gets PQ.\text{pop}()$
+    \If{$x = n-1$ \textbf{and} $y = n-1$}
+        \State \textbf{return} $g$
+    \EndIf
+    \For{each of the 8 directions $(nx, ny)$}
+        \If{$(nx, ny)$ is valid \textbf{and} $grid[nx][ny] = 0$ \textbf{and not} $visited[nx][ny]$}
+            \State $visited[nx][ny] \gets \textbf{true}$
+            \State $new\_g \gets g + 1$
+            \State $new\_f \gets new\_g + \text{Heuristic}(nx, ny, n-1, n-1)$
+            \State $PQ.\text{push}(\{new\_f, new\_g, nx, ny\})$
+        \EndIf
+    \EndFor
+\EndWhile
+\State \textbf{return} $-1$
+\end{algorithmic}
+\vspace{-0.5em}
+\noindent\rule{\textwidth}{0.6pt}
+\vspace{0.5em}
+
+\textbf{6. Complexity Analysis:}
+\begin{itemize}
+    \item \textbf{Time Complexity:} $\mathcal{O}(N^2)$ in the worst case (highly obstructed map), but significantly faster than BFS in average open-space scenarios due to heuristic pruning.
+    \item \textbf{Space Complexity:} $\mathcal{O}(N^2)$ to maintain the visited states and the priority queue.
+\end{itemize}
+% -------------------------
+% Problem 4
+% -------------------------
+\subsection{Problem 4: Nearest Fire Station}
+
+\textbf{1. Detailed Problem Description:}
+You are developing a dispatch system for a city's Fire Department. The city's road network consists of $N$ intersections and $M$ roads. There are $K$ fire stations located at distinct intersections. When a fire is reported at any given intersection, the system must automatically dispatch a fire engine from the specific station that guarantees the shortest travel time.
+
+\textbf{2. Given (Input):}
+\begin{itemize}
+    \item An undirected, weighted graph with $N$ nodes (intersections) and $M$ edges (roads).
+    \item Edge weights represent travel time.
+    \item $K$ source nodes representing the locations of the fire stations.
+    \item $Q$ queries, each representing a fire location.
+\end{itemize}
+
+\textbf{3. Requirement (Output):}
+For each of the $Q$ queries, output the ID of the dispatched fire station and the minimum travel time required to reach the fire. If multiple stations share the exact same minimum travel time, any of them can be returned.
+
+\textbf{4. Core Algorithm:} 
+Multi-Source Shortest Path (MSSP) via \textbf{Super Source Simulation} using Dijkstra's Algorithm.
+
+\textbf{5. Editorial Strategy \& Pseudocode (Hint):}
+Instead of running Dijkstra's algorithm $K$ times (once from each fire station) or $Q$ times (once from each fire location), we introduce the concept of a virtual "Super Source" connected to all $K$ stations with $0$-weight edges. 
+
+In practice, this is seamlessly simulated by initializing the Priority Queue with all $K$ fire stations at time $0$. To identify \textit{which} station is responding, we maintain an \texttt{origin} array that propagates the starting station's ID along the shortest path.
+
+\vspace{0.5em}
+\noindent\rule{\textwidth}{0.6pt}
+\begin{algorithmic}[1]
+\State \textbf{Initialize} array $dist[N] \gets \infty$
+\State \textbf{Initialize} array $origin[N] \gets -1$
+\State \textbf{Initialize} Min-Heap $PQ$
+\Statex
+\Comment{Super Source Simulation: Push all fire stations simultaneously}
+\For{each station $S \in K\_stations$}
+    \State $dist[S] \gets 0$
+    \State $origin[S] \gets S$
+    \State $PQ.\text{push}(\{0, S, S\})$ \Comment{State: $\{time, current\_node, origin\_station\}$}
+\EndFor
+\Statex
+\While{$PQ$ is \textbf{not} empty}
+    \State $\{time, u, orig\} \gets PQ.\text{pop}()$
+    \If{$time > dist[u]$}
+        \State \textbf{continue} \Comment{Skip stale state}
+    \EndIf
+    \Statex
+    \For{each neighbor $v$ of $u$ with travel time $w$}
+        \If{$time + w < dist[v]$}
+            \State $dist[v] \gets time + w$
+            \State $origin[v] \gets orig$ \Comment{Propagate the exact originating fire station}
+            \State $PQ.\text{push}(\{dist[v], v, orig\})$
+        \EndIf
+    \EndFor
+\EndWhile
+\Statex
+\Comment{Process all $Q$ fire emergency queries in $\mathcal{O}(1)$ time each}
+\For{each $query\_node \in Q$}
+    \State \textbf{print} $origin[query\_node]$ \textbf{and} $dist[query\_node]$
+\EndFor
+\end{algorithmic}
+\vspace{-0.5em}
+\noindent\rule{\textwidth}{0.6pt}
+\vspace{0.5em}
+
+\textbf{6. Complexity Analysis:}
+\begin{itemize}
+    \item \textbf{Time Complexity:} $\mathcal{O}(M \log N)$ to compute the shortest paths from all sources to all reachable nodes simultaneously.
+    \item \textbf{Space Complexity:} $\mathcal{O}(N + M)$ to store the graph representations, the distance array, the origin tracking array, and the priority queue.
+\end{itemize}

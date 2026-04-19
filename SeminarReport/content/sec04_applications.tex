@@ -1,3 +1,23 @@
 \section{Applications}
 
 % Member 4 writes content here (Google Maps, OSPF, BGP routing, A* algorithm applications)...
+% --- Section 7: Applications ---
+% --- Section 7: Applications ---
+\label{sec:applications}
+
+\subsection{General Applications}
+Shortest path algorithms constitute a cornerstone of graph theory with extensive cross-disciplinary utility. Generally, these algorithms are employed whenever a system can be modeled as a set of discrete states (nodes) and transitions (edges) with associated costs. In the realm of logistics and transportation, they facilitate the optimization of supply chains by determining the most cost-effective routes for goods. In computer networking, they underpin routing protocols such as OSPF and IS-IS, ensuring efficient data transmission across the internet. Furthermore, these algorithms are pivotal in robotics for motion planning, allowing autonomous agents to navigate complex environments while avoiding obstacles and minimizing energy consumption.
+
+\subsection{Specific Problem Applications}
+
+\paragraph{Single-Source Shortest Path (SSSP)}
+The Single-Source Shortest Path model is utilized when the objective is to find the minimum distance from a fixed origin to all other reachable locations in a network. This is particularly relevant in social network analysis to determine the "closeness centrality" of an individual, reflecting their influence within a community. Additionally, in urban infrastructure, SSSP algorithms assist in locating optimal sites for emergency services, such as fire stations or hospitals, ensuring that any point in the city can be reached within a minimum time threshold from the central hub.
+
+\paragraph{Single-Pair Shortest Path}
+While often solved using SSSP techniques, the Single-Pair Shortest Path problem specifically focuses on finding the optimal route between one designated source and one designated destination. This is the fundamental logic behind point-to-point navigation systems in GPS devices and digital maps. Beyond physical geography, it is applied in game development for pathfinding (e.g., the A* algorithm), enabling non-player characters (NPCs) to navigate towards a target position efficiently. In electronic design automation (EDA), it is also used for wire routing between two specific components on a printed circuit board.
+
+\paragraph{All-Pairs Shortest Path (APSP)}
+The All-Pairs Shortest Path problem addresses the requirement of knowing the distances between every possible pair of nodes in a graph. This is critical in the analysis of metabolic networks in bioinformatics, where researchers examine the interconnectedness of all chemical compounds within a cell. In the context of telecommunications, APSP is used to construct a complete delay matrix for the entire network, which is essential for global traffic engineering and detecting routing bottlenecks across the infrastructure.
+
+\paragraph{Multi-Source Shortest Path}
+The Multi-Source Shortest Path problem arises when there are multiple potential starting points (sources) and the goal is to find the shortest distance to any node from its nearest source. A practical application is found in the management of Content Delivery Networks (CDNs), where a user's request is directed to the geographically closest or least congested server among many distributed globally. This model is also employed in disaster management for evacuation planning, identifying the quickest path for residents to reach any one of several designated safety shelters.
