@@ -12,4 +12,4 @@
 - [x] **YouTube Video Link:** https://www.youtube.com/watch?v=rgG_c79Os9U
 
 ## Member Contribution
-Evaluate our group's contribution here: https://tinyurl.com/httprojeval
+Evaluate our group's contribution here: https://docs.google.com/spreadsheets/d/1uYZBz4xo4fpN5aQJDdoq-mAdz8Yqka5mLGo0koGDHoU/edit?gid=1781385760#gid=1781385760
