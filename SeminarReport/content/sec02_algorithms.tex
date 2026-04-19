@@ -9,7 +9,7 @@ In a weighted graph, the objective of a shortest path algorithm is to identify a
 The Single Source Shortest Path (SSSP) problem asks a fundamental question: \textit{What is the shortest path from one starting node to all other nodes?}
 
 \subsection{Shortest Path in DAGs}
-\textbf{Historical Context:} While shortest path traversal on Directed Acyclic Graphs represents a fundamental application of graph theory rather than a single named algorithm, its core mechanism—Topological Sorting—was mathematically formalized by Arthur B. Kahn in 1962. The sequential evaluation method used to find shortest paths has direct roots in the PERT (Program Evaluation and Review Technique) charts developed by the United States Navy in the 1950s for project scheduling.
+\textbf{Historical Context:} While shortest path traversal on Directed Acyclic Graphs represents a fundamental application of graph theory rather than a single named algorithm, its core mechanism—Topological Sorting—was mathematically formalized by Arthur B. Kahn in 1962. The sequential evaluation method used to find shortest paths has direct roots in the PERT (Program Evaluation and Review Technique) charts developed by the United States Navy in the 1950s for project scheduling \cite{kahn1962topological,malcolm1959application}.
 
 \vspace{0.2cm}
 A \textbf{Directed Acyclic Graph (DAG)} is a directed graph which forms no cycles or loops. The SSSP problem can be solved efficiently on a DAG due to the fact that the nodes can be ordered in a topological ordering via topsort and processed sequentially.
@@ -17,7 +17,7 @@ A \textbf{Directed Acyclic Graph (DAG)} is a directed graph which forms no cycle
 \subsubsection{Topological Order}
 A \textit{linear ordering of its vertices such that for every directed edge from vertex $u$ to vertex $v$ ($u \to v$), vertex $u$ comes before vertex $v$ in the ordering}.
 
-Topological sorting can be implemented in two standard ways: a DFS-based approach or a BFS-based approach (Kahn's algorithm). Kahn's algorithm is especially useful when we want built-in DAG validation, because it can detect non-DAG inputs when not all vertices can be processed. In this implementation, we use the DFS-based method and assume the input graph is already a DAG.
+Topological sorting can be implemented in two standard ways: a DFS-based approach or a BFS-based approach (Kahn's algorithm). Kahn's algorithm is especially useful when we want built-in DAG validation, because it can detect non-DAG inputs when not all vertices can be processed. In this implementation, we use the DFS-based method and assume the input graph is already a DAG \cite{cormen2022introduction}.
 
 \textbf{Topological Sort Pseudocode:}
 \begin{algorithm}[H]
@@ -133,7 +133,7 @@ Topological sorting can be implemented in two standard ways: a DFS-based approac
 \end{itemize}
 
 \subsection{Dijkstra's Algorithm}
-\textbf{Historical Context:} Conceived by the Dutch computer scientist Edsger W. Dijkstra in 1956 (and formally published in 1959 in \textit{A note on two problems in connexion with graphs}), this algorithm was famously designed in just twenty minutes while Dijkstra was drinking coffee at a café in Amsterdam. He initially created it to find the shortest path between the cities of Rotterdam and Groningen to demonstrate the capabilities of the new ARMAC computer.
+\textbf{Historical Context:} Conceived by the Dutch computer scientist Edsger W. Dijkstra in 1956 (and formally published in 1959 in \textit{A note on two problems in connexion with graphs}), this algorithm was famously designed in just twenty minutes while Dijkstra was drinking coffee at a café in Amsterdam. He initially created it to find the shortest path between the cities of Rotterdam and Groningen to demonstrate the capabilities of the new ARMAC computer \cite{dijkstra1959note,dijkstra2001interview}.
 
 \vspace{0.2cm}
 Given a graph of non-negative weight edges. We can greedily assume that adding edges can only increase the total path cost. 
@@ -184,7 +184,7 @@ Therefore, we come up with the \textbf{Greedy strategy}: continually select the 
     \item \textbf{Lazy Dijkstra:} uses a standard Binary Heap. Time complexity: $\mathbf{O((V + E)\log V)}$.
     \item \textbf{Eager Dijkstra:} uses an indexed priority queue to instantly locate the vertex and update the value dynamically. Time complexity: $\mathbf{O((V + E)\log V)}$.
     \item \textbf{D-ary Heap Dijkstra (dense graph optimizer):} uses a Heap giving each parent $D$ children, cheaper when updating but more expensive when polling. \\ Time complexity: $\mathbf{O(V \log_D V + E \log_D V)}$.
-    \item \textbf{Fibonacci Heap Dijkstra:} Replaces the standard tree-based heap with a highly complex collection of trees called a Fibonacci Heap which achieved updating time an amortized $O(1)$. Time Complexity: $\mathbf{O(V \log V + E)}$.
+    \item \textbf{Fibonacci Heap Dijkstra:} Replaces the standard tree-based heap with a highly complex collection of trees called a Fibonacci Heap which achieved updating time an amortized $O(1)$. Time Complexity: $\mathbf{O(V \log V + E)}$ \cite{fredman1987fibonacci}.
 \end{itemize}
 \subsubsection{Step-by-Step Demonstration: Dijkstra's Algorithm}
 \textit{This section describes the step-by-step execution of Dijkstra's algorithm as captured in our visualizer, illustrating the movement between the Open and Closed sets and the relaxation of edges.}
@@ -220,7 +220,7 @@ Therefore, we come up with the \textbf{Greedy strategy}: continually select the 
     \item \textbf{Expansion:} Node C will be selected as the next "Current Node" in the following step. The process will repeat: checking C's neighbor (Node E), calculating cumulative distances, and updating the tables until the target is reached or all nodes are closed.
 \end{enumerate}
 \subsection{Shortest Path in Bellman-Ford}
-\textbf{Historical Context:} This algorithm primarily bears the names of Richard Bellman (who published it in 1958 in \textit{On a routing problem}) and Lester R. Ford Jr. (who developed the foundational flow formulations in 1956). However, the algorithm was independently published by Edward F. Moore in 1959 and Alfonso Shimbel in 1955. As a pioneering application of Bellman's principle of optimality, it introduced dynamic programming to the realm of graph routing.
+\textbf{Historical Context:} This algorithm primarily bears the names of Richard Bellman (who published it in 1958 in \textit{On a routing problem}) and Lester R. Ford Jr. (who developed the foundational flow formulations in 1956). However, the algorithm was independently published by Edward F. Moore in 1959 and Alfonso Shimbel in 1955. As a pioneering application of Bellman's principle of optimality, it introduced dynamic programming to the realm of graph routing \cite{bellman1958routing,ford1956network,moore1959shortest,shimbel1955structure}.
 
 \vspace{0.2cm}
 When a graph contains negative weight edges, Dijkstra's greedy logic break down. What should we do?
@@ -298,11 +298,6 @@ After running $V - 1$ iterations, run the relaxation one more time. If any edge 
     \item \textbf{Time Complexity: $\mathbf{O(E \cdot V)}$}. We iterate every edges $V - 1$ times and one more loop for negative cycle detection.
     \item \textbf{Space Complexity: $\mathbf{O(V)}$}. We are storing the distances array for every vertex and the priority queue for each relaxed edge.
 \end{itemize}
-
-\textbf{Data Insight (Placeholder):}
-\begin{itemize}
-    \item [Observed graph density/sparsity pattern and why Bellman-Ford was or was not practical on the dataset.]
-\end{itemize}
 \subsubsection{Step-by-Step Demonstration: Bellman-Ford Algorithm}
 \textit{This section details the internal mechanics of the Bellman-Ford algorithm during its first iteration, highlighting the relaxation process and the final validation for negative cycles.}
 
@@ -369,7 +364,7 @@ Then when we need to track the path, we can route from the end to start through 
 \textit{What is the shortest path between all pairs of nodes?}
 
 \subsection{Floyd-Warshall Algorithm}
-\textbf{Historical Context:} Published independently by Robert W. Floyd (\textit{Algorithm 97: Shortest Path}, 1962) and Stephen Warshall (\textit{A theorem on Boolean matrices}, 1962), this algorithm is an elegant realization of dynamic programming. It fundamentally relies on a theorem Warshall initially developed for computing the transitive closure of a graph, which Floyd ingeniously adapted to compute minimal path weights.
+\textbf{Historical Context:} Published independently by Robert W. Floyd (\textit{Algorithm 97: Shortest Path}, 1962) and Stephen Warshall (\textit{A theorem on Boolean matrices}, 1962), this algorithm is an elegant realization of dynamic programming. It fundamentally relies on a theorem Warshall initially developed for computing the transitive closure of a graph, which Floyd ingeniously adapted to compute minimal path weights \cite{floyd1962algorithm97,warshall1962theorem}.
 
 \vspace{0.2cm}
 We are no longer looking for paths from a single source. We want to find the shortest path between every pair of vertices $(u, v)$ simultaneously.
@@ -500,7 +495,7 @@ Then when we need to track the path, we can route from the start to end through 
     \label{fig:fw_step3}
 \end{figure}
 \subsection{A* Search Algorithm}
-\textbf{Historical Context:} Developed in 1968 by Peter Hart, Nils Nilsson, and Bertram Raphael at the Stanford Research Institute, A* was originally designed to help the Shakey robot navigate through rooms containing obstacles.
+\textbf{Historical Context:} Developed in 1968 by Peter Hart, Nils Nilsson, and Bertram Raphael at the Stanford Research Institute, A* was originally designed to help the Shakey robot navigate through rooms containing obstacles \cite{hart1968formal}.
 
 \vspace{0.2cm}
 While Dijkstra's algorithm searches equally in all directions, A* uses a \textbf{heuristic} to guide the search direction towards the target, drastically reducing the number of explored nodes. It evaluates nodes by combining two metrics:
@@ -546,7 +541,7 @@ While Dijkstra's algorithm searches equally in all directions, A* uses a \textbf
     \item \textbf{Step 3 (Path Discovery):} The algorithm terminates the moment the goal node is extracted from the priority queue, avoiding unnecessary exploration of the opposite side of the graph.
 \end{enumerate}
 \subsection{Johnson's Algorithm}
-\textbf{Historical Context:} Published by Donald B. Johnson in 1977, this algorithm was developed to efficiently solve the All-Pairs Shortest Path (APSP) problem on sparse graphs. While Floyd-Warshall is simple, its $O(V^3)$ complexity makes it prohibitively slow for graphs with few edges. Johnson ingeniously combined Bellman-Ford and Dijkstra's algorithms, utilizing a mathematical technique to eliminate negative weights without altering the shortest paths.
+\textbf{Historical Context:} Published by Donald B. Johnson in 1977, this algorithm was developed to efficiently solve the All-Pairs Shortest Path (APSP) problem on sparse graphs. While Floyd-Warshall is simple, its $O(V^3)$ complexity makes it prohibitively slow for graphs with few edges. Johnson ingeniously combined Bellman-Ford and Dijkstra's algorithms, utilizing a mathematical technique to eliminate negative weights without altering the shortest paths \cite{johnson1977efficient}.
 
 \vspace{0.2cm}
 For graphs with negative edges, we cannot simply use Dijkstra. We also cannot arbitrarily add a constant to all edges, as that disproportionately penalizes paths with more edges. Johnson's Algorithm solves this via a technique called \textbf{Edge Reweighting}.
@@ -615,7 +610,7 @@ For graphs with negative edges, we cannot simply use Dijkstra. We also cannot ar
 Sometimes, routing involves multiple starting locations simultaneously. A prime example is the \textbf{Nearest Fire Station} problem: \textit{Given a city network with $K$ fire stations and multiple fire emergencies, dispatch the engine from the station with the absolute shortest travel time to the fire.}
 
 \subsection{Super Source Simulation}
-\textbf{Core Idea:} Instead of running a Single-Source Shortest Path (SSSP) algorithm separately for every fire station ($K$ times), which is heavily inefficient, we can reduce the problem mathematically by introducing a \textbf{"Super Source"} node.
+\textbf{Core Idea:} Instead of running a Single-Source Shortest Path (SSSP) algorithm separately for every fire station ($K$ times), which is heavily inefficient, we can reduce the problem mathematically by introducing a \textbf{"Super Source"} node \cite{cormen2022introduction}.
 
 \begin{enumerate}
     \item Create a virtual \textbf{Super Source} node ($S$).

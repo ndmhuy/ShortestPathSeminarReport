@@ -9,10 +9,13 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction \& History}{2}{section.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Problem Introduction}{2}{subsection.1.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.2}The Evolution of Shortest Path Algorithms}{2}{subsection.1.2}\protected@file@percent }
+\citation{kahn1962topological}
+\citation{malcolm1959application}
 \@writefile{toc}{\contentsline {subsection}{\numberline {1.3}Shortest Paths in Today's World}{3}{subsection.1.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2}Main Data Structures \& Algorithms}{3}{section.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3}Single Source Shortest Path (SSSP)}{3}{section.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Shortest Path in DAGs}{3}{subsection.3.1}\protected@file@percent }
+\citation{cormen2022introduction}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}Topological Order}{4}{subsubsection.3.1.1}\protected@file@percent }
 \@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Topological Sort}}{4}{algorithm.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}DAG Shortest Path Processing}{5}{subsubsection.3.1.2}\protected@file@percent }
@@ -21,24 +24,33 @@
 \newlabel{fig:dag_step1}{{1}{6}{Phase 1 - DFS topological sort pushing nodes into the stack, and the initialization of the \texttt {dist} array}{figure.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Phase 2 - Sequential traversal follows the topological order, dynamically relaxing edges and updating the shortest distances.}}{7}{figure.2}\protected@file@percent }
 \newlabel{fig:dag_step2}{{2}{7}{Phase 2 - Sequential traversal follows the topological order, dynamically relaxing edges and updating the shortest distances}{figure.2}{}}
+\citation{dijkstra1959note}
+\citation{dijkstra2001interview}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces DAG Shortest Path}}{8}{algorithm.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Dijkstra's Algorithm}{8}{subsection.3.2}\protected@file@percent }
 \@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces Dijkstra's Algorithm}}{9}{algorithm.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Dijkstra Optimizing}{9}{subsubsection.3.2.1}\protected@file@percent }
+\citation{fredman1987fibonacci}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Step-by-Step Demonstration: Dijkstra's Algorithm}{10}{subsubsection.3.2.2}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Dijkstra's Algorithm - Phase 1: Node A is selected as the current node, and its neighbors (B and C) are being evaluated.}}{11}{figure.3}\protected@file@percent }
 \newlabel{fig:dijkstra_demo_A}{{3}{11}{Dijkstra's Algorithm - Phase 1: Node A is selected as the current node, and its neighbors (B and C) are being evaluated}{figure.3}{}}
+\citation{bellman1958routing}
+\citation{ford1956network}
+\citation{moore1959shortest}
+\citation{shimbel1955structure}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Shortest Path in Bellman-Ford}{12}{subsection.3.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.1}How Bellman-Ford works: Global Relaxation}{12}{subsubsection.3.3.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.2}Bellman-Ford Superpower: Negative Cycle Detection}{13}{subsubsection.3.3.2}\protected@file@percent }
 \@writefile{loa}{\contentsline {algorithm}{\numberline {4}{\ignorespaces Bellman-Ford Algorithm}}{14}{algorithm.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.3.3}Step-by-Step Demonstration: Bellman-Ford Algorithm}{15}{subsubsection.3.3.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Initial state of the Bellman-Ford visualizer: Node S is initialized to 0, and all other nodes are set to $\infty $.}}{16}{figure.4}\protected@file@percent }
-\newlabel{fig:bf_init}{{4}{16}{Initial state of the Bellman-Ford visualizer: Node S is initialized to 0, and all other nodes are set to $\infty $}{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Initial state of the Bellman-Ford visualizer: Node S is initialized to 0, and all other nodes are set to $\infty $.}}{15}{figure.4}\protected@file@percent }
+\newlabel{fig:bf_init}{{4}{15}{Initial state of the Bellman-Ford visualizer: Node S is initialized to 0, and all other nodes are set to $\infty $}{figure.4}{}}
+\citation{floyd1962algorithm97}
+\citation{warshall1962theorem}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Final state after convergence: The visualizer confirms the shortest paths and validates the absence of negative cycles.}}{17}{figure.5}\protected@file@percent }
 \newlabel{fig:bf_final}{{5}{17}{Final state after convergence: The visualizer confirms the shortest paths and validates the absence of negative cycles}{figure.5}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4}SSSP Algorithm: How to track the path?}{17}{subsection.3.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4}All Pairs Shortest Path (APSP)}{18}{section.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}All Pairs Shortest Path (APSP)}{17}{section.4}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Floyd-Warshall Algorithm}{18}{subsection.4.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}The Intermediate Node}{18}{subsubsection.4.1.1}\protected@file@percent }
 \@writefile{loa}{\contentsline {algorithm}{\numberline {5}{\ignorespaces Floyd-Warshall Algorithm}}{19}{algorithm.5}\protected@file@percent }
@@ -50,15 +62,18 @@
 \newlabel{fig:fw_step2a}{{7}{21}{Phase 2a - Evaluating \texttt {dist[1][1]} through Node 0. The new distance (5) is greater than the current (0), resulting in no update}{figure.7}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Phase 2b - Successful relaxation of \texttt  {dist[3][1]}. The cell is highlighted in blue as it updates from 6 to the new minimum of 0.}}{22}{figure.8}\protected@file@percent }
 \newlabel{fig:fw_step2b}{{8}{22}{Phase 2b - Successful relaxation of \texttt {dist[3][1]}. The cell is highlighted in blue as it updates from 6 to the new minimum of 0}{figure.8}{}}
+\citation{hart1968formal}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Phase 3 - The final completed matrix containing the optimal shortest paths between all pairs of vertices.}}{23}{figure.9}\protected@file@percent }
 \newlabel{fig:fw_step3}{{9}{23}{Phase 3 - The final completed matrix containing the optimal shortest paths between all pairs of vertices}{figure.9}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}A* Search Algorithm}{23}{subsection.4.2}\protected@file@percent }
+\citation{johnson1977efficient}
 \@writefile{loa}{\contentsline {algorithm}{\numberline {6}{\ignorespaces A* Search Algorithm}}{24}{algorithm.6}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Step-by-Step Demonstration: A*}{24}{subsubsection.4.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Johnson's Algorithm}{24}{subsection.4.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}How Johnson's Algorithm works}{25}{subsubsection.4.3.1}\protected@file@percent }
 \@writefile{loa}{\contentsline {algorithm}{\numberline {7}{\ignorespaces Johnson's Algorithm}}{26}{algorithm.7}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Step-by-Step Demonstration: Johnson's Algorithm}{26}{subsubsection.4.3.2}\protected@file@percent }
+\citation{cormen2022introduction}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Multi-Source Shortest Path (MSSP)}{27}{section.5}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Super Source Simulation}{27}{subsection.5.1}\protected@file@percent }
 \@writefile{loa}{\contentsline {algorithm}{\numberline {8}{\ignorespaces MSSP - Super Source Dijkstra}}{28}{algorithm.8}\protected@file@percent }
@@ -97,19 +112,36 @@
 \@writefile{toc}{\contentsline {section}{\numberline {11}Datasets}{47}{section.11}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {11.1}Dataset Suite}{47}{subsection.11.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {11.2}Dataset Files}{47}{subsection.11.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {11.3}Header Format}{47}{subsection.11.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.3}Header Format}{48}{subsection.11.3}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {11.4}Benchmark Interpretation}{48}{subsection.11.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {12}Comparison}{48}{section.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {12}Empirical Performance Comparison}{48}{section.12}\protected@file@percent }
+\newlabel{sec:comparison}{{12}{48}{Empirical Performance Comparison}{section.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.1}Temporal Efficiency and Priority Queue Dynamics}{48}{subsection.12.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.2}Spatial Complexity and Resource Saturation}{49}{subsection.12.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.3}Multi-Source Optimization Analysis}{50}{subsection.12.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {12.4}Robustness and Algorithmic Selection}{50}{subsection.12.4}\protected@file@percent }
 \bibstyle{plain}
 \bibdata{ref/ref}
-\bibcite{djb2}{1}
-\bibcite{cses_flight_discount}{2}
-\bibcite{eraser_io}{3}
-\bibcite{google_gemini}{4}
-\bibcite{leetcode_binary_matrix}{5}
-\bibcite{openai_chatgpt}{6}
-\bibcite{vnoj_dhserv}{7}
-\@writefile{toc}{\contentsline {section}{References}{49}{section*.6}\protected@file@percent }
+\bibcite{bellman1958routing}{1}
+\bibcite{boost_graph_library}{2}
+\bibcite{cormen2022introduction}{3}
+\bibcite{cses_flight_discount}{4}
+\bibcite{dijkstra1959note}{5}
+\bibcite{dimacs_challenge}{6}
+\bibcite{dijkstra2001interview}{7}
+\bibcite{floyd1962algorithm97}{8}
+\bibcite{ford1956network}{9}
+\bibcite{fredman1987fibonacci}{10}
+\bibcite{hart1968formal}{11}
+\bibcite{johnson1977efficient}{12}
+\bibcite{kahn1962topological}{13}
+\@writefile{toc}{\contentsline {section}{References}{51}{section*.6}\protected@file@percent }
+\bibcite{leetcode_binary_matrix}{14}
+\bibcite{malcolm1959application}{15}
+\bibcite{moore1959shortest}{16}
+\bibcite{shimbel1955structure}{17}
+\bibcite{vnoj_dhserv}{18}
+\bibcite{warshall1962theorem}{19}
 \citation{*}
 \gdef\svg@ink@ver@settings{{\m@ne }{inkscape}{\m@ne }}
-\gdef \@abspage@last{53}
+\gdef \@abspage@last{56}

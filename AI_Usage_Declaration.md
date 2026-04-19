@@ -16,4 +16,12 @@
 - [Tool name]: [Description of how it was used]
 
 ## Nguyễn Đình Minh Huy (25125083)
-- [Tool name]: [Description of how it was used]
+- GitHub Copilot:
+	+ Assisted with debugging LaTeX/report consistency issues and refining technical wording.
+	+ Helped draft and revise implementation instructions, dataset descriptions, and benchmark explanation sections.
+	+ Supported code-level tasks in C++ (benchmark options, DAG dataset workflow, and run-command guidance).
+- Gemini:
+	+ Used for grammar polishing and rephrasing selected paragraphs for clearer academic writing.
+- My responsibility:
+	+ I reviewed, validated, and manually edited all AI-generated outputs.
+	+ Final decisions, code integration, benchmark execution, and report accuracy checks were done by me.

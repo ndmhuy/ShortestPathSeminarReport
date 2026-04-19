@@ -12,4 +12,18 @@
 - [List of updates/fixes made by this member]
 
 ## Nguyễn Đình Minh Huy (25125083)
-- [List of updates/fixes made by this member]
+- Implemented DAG-focused data pipeline in source code:
+	+ Added `SourceCode/ShortestPath/dag_graph_generator.cpp` and generated `dataset5_dag_sssp.txt` for DAG benchmarking.
+	+ Updated `SourceCode/ShortestPath/graph_generator.cpp` so dataset headers are generated dynamically from output filenames.
+- Extended benchmark system in source code:
+	+ Updated `SourceCode/ShortestPath/read_graph_info.cpp` to support heap backend switching via `--heap-backend=custom|boost`.
+	+ Added fair DAG benchmark path `dagShortestPath (precomputed topo order)` to reduce repeated topological-sort overhead during multi-source runs.
+- Extended shortest-path implementation layer:
+	+ Updated `SourceCode/ShortestPath/ShortestPath.h` and `SourceCode/ShortestPath/ShortestPath.cpp` with optional Boost-backed variants (`eagerDijkstraBoost`, `dijkstraWithBoostDaryHeap`) and runtime availability checks.
+	+ Kept custom heap path as default fallback when Boost headers are unavailable.
+- Regenerated benchmark results and logs for all datasets:
+	+ Ran benchmarks for datasets 1-5 with both custom and boost heap backends.
+	+ Added/updated logs such as `bench_dataset1_sparse_large_boost.log` through `bench_dataset5_dag_sssp_boost.log`.
+- Report/documentation synchronization:
+	+ Updated compile/run instructions and benchmark commands in `SeminarReport/content/sec07_source_codes.tex`.
+	+ Updated dataset and interpretation details in `SeminarReport/content/sec08_datasets.tex`.
