@@ -34,3 +34,8 @@ out/
 x64/
 Debug/
 Release/
+
+# ShortestPath project binaries and generated benchmark logs
+SourceCode/ShortestPath/benchmark
+SourceCode/ShortestPath/dag_graph_generator
+SourceCode/ShortestPath/*.log
