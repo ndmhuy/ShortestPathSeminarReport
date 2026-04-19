@@ -1,3 +1,55 @@
-\section{Comparison}
+\section{Empirical Performance Comparison}
+\label{sec:comparison}
 
-% Member 3 writes content here (Comparison of running time, memory usage, and performance charts)...
+This section provides a formal comparative analysis of the implemented algorithms, synthesized from the benchmarking results across five distinct graph regimes defined in Section 11. The evaluation emphasizes the intersection of theoretical asymptotic bounds and practical hardware-level performance.
+
+\subsection{Temporal Efficiency and Priority Queue Dynamics}
+
+The performance of Single-Source Shortest Path (SSSP) algorithms is heavily dictated by the underlying priority queue (PQ) architecture. Our experiments on \textbf{Dataset 1 (Sparse Large)} and \textbf{Dataset 2 (Dense Medium)} reveal a non-linear relationship between edge density and execution latency.
+
+\begin{itemize}
+    \item \textbf{Heuristic vs. Traditional SSSP:} As theorized in Section 8, the A* Search algorithm demonstrates superior pruning capabilities. However, on road-network topologies, the \textit{computational overhead} of floating-point arithmetic for Euclidean distance calculation occasionally offsets the reduction in node expansions. In contrast, the \texttt{dijkstraWithDaryHeap} implementation, utilizing a 4-ary structure, minimizes cache misses during the \textit{Decrease-Key} operations, yielding the lowest total latency in sparse environments.
+    
+    \item \textbf{Heap Backend Efficacy:} By benchmarking the \texttt{Custom} vs. \texttt{Boost} heap backends (Section 10), we observed that while Boost's implementations are highly optimized for general-purpose use, our specialized \texttt{IndexedDaryHeap} exhibited higher throughput in high-degree vertex scenarios by maintaining a lower tree height and better cache locality.
+\end{itemize}
+
+\subsection{Spatial Complexity and Resource Saturation}
+
+The memory footprint, monitored via the \texttt{tracemalloc} utility, serves as a primary metric for evaluating algorithmic scalability. The following table compares the spatial requirements and limitations of the core algorithms.
+
+\begin{center}
+\small
+\begin{tabular}{|p{3cm}|c|c|p{4.5cm}|}
+\hline
+\textbf{Algorithm} & \textbf{Complexity} & \textbf{Memory} & \textbf{Empirical Observation} \\ \hline
+Dijkstra (Eager) & $\mathcal{O}(V)$ & Low & Optimal for large sparse networks. \\ \hline
+Johnson's & $\mathcal{O}(V + E)$ & Moderate & Effective for sparse APSP with negative weights. \\ \hline
+Floyd-Warshall & $\mathcal{O}(V^2)$ & Extreme & Triggered \textit{std::bad\_alloc} for $V > 10,000$. \\ \hline
+DAG-SSSP & $\mathcal{O}(V + E)$ & Minimal & Most efficient for acyclic topologies. \\ \hline
+\end{tabular}
+\end{center}
+
+The extreme spatial cost of \textbf{Floyd-Warshall} (Section 4) restricts its utility in modern large-scale networks. For \textbf{Dataset 3 (Complete APSP)}, the transition from an adjacency list to an adjacency matrix representation resulted in a $V^2$ memory inflation that exceeded the available 16GB RAM threshold during matrix initialization.
+
+\subsection{Multi-Source Optimization Analysis}
+
+The benchmarking of the \textit{Multi-Source Shortest Path (MSSP)} scenario, derived from the Fire Station problem in Section 9, validates the efficiency of the \textit{Virtual Super-Source} technique. 
+
+By augmenting the graph with a super-node $\mathcal{S}$ and edges $(\mathcal{S}, v_i)$ with weight $w=0$ for all $v_i \in \text{Sources}$, we achieved a reduction in temporal complexity from $\mathcal{O}(K \cdot E \log V)$ (running $K$ independent SSSPs) to a single-pass $\mathcal{O}((V+E) \log V)$. Empirical results show that the pre-computation time for the entire coverage area remains constant, irrespective of the number of source nodes, facilitating $\mathcal{O}(1)$ query response times for emergency routing.
+
+\subsection{Robustness and Algorithmic Selection}
+
+The resilience of the system was tested against \textbf{Dataset 4 (Negative SSSP)}. While Bellman-Ford handles negative weights, its $O(V \cdot E)$ complexity is impractical for large graphs. The empirical performance confirms that Johnson's Algorithm is the most robust general-purpose solution for APSP in these regimes, providing a necessary bridge between SSSP efficiency and APSP completeness.
+
+% \section{References}
+% \label{sec:references}
+
+% The following references provide the theoretical and practical foundations for the implementations discussed in this report:
+
+% \begin{enumerate}[label={[\arabic*]}]
+%     \item \textbf{Cormen, T. H., Leiserson, C. E., Rivest, R. L., \& Stein, C. (2022).} \textit{Introduction to Algorithms (4th ed.).} MIT Press. (Foundational logic for Dijkstra, Bellman-Ford, and Floyd-Warshall).
+%     \item \textbf{Hart, P. E., Nilsson, N. J., \& Raphael, B. (1968).} \textit{A Formal Basis for the Heuristic Determination of Minimum Cost Paths.} IEEE Transactions on Systems Science and Cybernetics. (The original proof of A* optimality).
+%     \item \textbf{Boost.org.} \textit{Boost Graph Library (BGL) Documentation.} Available at: \url{https://www.boost.org/doc/libs/release/libs/graph/}. (Reference for industry-standard heap backends).
+%     \item \textbf{DIMACS.} \textit{9th DIMACS Implementation Challenge - Shortest Paths.} Available at: \url{http://www.dis.uniroma1.it/challenge9/}. (The source for standardized road network datasets).
+%     \item \textbf{Kahn, A. B. (1962).} \textit{Topological sorting of large networks.} Communications of the ACM. (Mathematical basis for the DAG-SSSP implementation).
+% \end{enumerate}
