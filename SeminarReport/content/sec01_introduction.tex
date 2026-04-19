@@ -1,3 +1,24 @@
 \section{Introduction \& History}
 
-% Member 1 writes content here (Problem introduction, Seven Bridges of Königsberg, Dijkstra, Bellman-Ford)...
+\subsection{Problem Introduction}
+In our daily lives, we constantly face the problem of finding the optimal route. Whether it is a delivery driver planning their route, or a commuter asking, "Which way is the fastest?", the underlying challenge remains the same. The question then arises: \textit{How do computers navigate thousands of turns and intersections to find the absolute best path in mere milliseconds?} To answer this, we must look into Graph Theory and the Shortest Path algorithms that power modern navigation systems.
+
+\subsection{The Evolution of Shortest Path Algorithms}
+The quest to find optimal paths is not a modern computing problem; its roots trace back centuries, evolving through significant mathematical and computational breakthroughs:
+
+\begin{itemize}
+    \item \textbf{1736 - The Birth of Graph Theory:} The foundation of all routing algorithms was laid by Leonhard Euler when he famously solved the Seven Bridges of Königsberg problem. By abstracting the landmasses as nodes and bridges as edges, he proved that no path could cross all seven bridges exactly once, officially giving birth to Graph Theory.
+    
+    \item \textbf{1956--1958 - Bellman-Ford Algorithm:} Richard Bellman and Lester Ford published an algorithm capable of finding the shortest paths from a single source vertex to all other vertices. Crucially, this algorithm successfully finds shortest paths even with negative edge weights, making it highly versatile for complex models.
+    
+    \item \textbf{1959 - Dijkstra's Algorithm:} Edsger W. Dijkstra published his legendary algorithm. It became the gold standard for finding the absolute shortest path from point A to point B in graphs with non-negative edge weights.
+    
+    \item \textbf{1962 - Floyd-Warshall Algorithm:} Robert Floyd and Stephen Warshall introduced a dynamic programming approach to compute the shortest paths between \textit{all pairs} of nodes simultaneously within a graph.
+    
+    \item \textbf{1968 - A* Search Algorithm:} As systems grew more complex, pure graph traversal became computationally heavy. The A* algorithm was created as a faster shortest path finder, utilizing heuristics to actively guide the AI search direction rather than exploring in all directions equally.
+\end{itemize}
+
+\subsection{Shortest Paths in Today's World}
+While the foundational algorithms of the mid-20th century are brilliant, representing the real world today—such as the infrastructure behind Google Maps—requires graphs with billions of nodes. Running traditional shortest-path algorithms across an entire country's road network would be fundamentally too slow for real-time user queries. 
+
+To overcome this, researchers introduced advanced routing techniques like \textbf{Contraction Hierarchies (2008)} and \textbf{Hub Labeling}. By extensively pre-computing the map data, modern servers can calculate the shortest path across enormous geographical distances in mere milliseconds.

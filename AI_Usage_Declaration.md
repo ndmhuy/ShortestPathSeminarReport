@@ -3,7 +3,9 @@
 *This document outlines how AI tools were used during the development of this project and report.*
 
 ## Nguyễn Anh Kiệt (25125074)
-- [Tool name]: [Description of how it was used]
+- Gemini AI: 
++ Utilized for LaTeX editing.
++ Delivers supplementary algorithmic knowledge.
 
 ## Trần Như Khải (25125045)
 - [Tool name]: [Description of how it was used]

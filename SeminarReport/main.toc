@@ -1,43 +1,57 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Introduction \& History}{2}{section.1}%
-\contentsline {section}{\numberline {2}Main Data Structures \& Algorithms}{2}{section.2}%
-\contentsline {section}{\numberline {3}Single Source Shortest Path (SSSP)}{2}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Shortest Path in DAGs}{2}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Topological Order}{2}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}DAG Shortest Path Processing}{3}{subsubsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.2}Dijkstra's Algorithm}{4}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Dijkstra Optimizing}{5}{subsubsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.3}Shortest Path in Bellman-Ford}{6}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}How Bellman-Ford works: Global Relaxation}{6}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Bellman-Ford Superpower: Negative Cycle Detection}{7}{subsubsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.4}SSSP Algorithm: How to track the path?}{9}{subsection.3.4}%
-\contentsline {section}{\numberline {4}All Pairs Shortest Path (APSP)}{9}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Floyd-Warshall Algorithm}{9}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}The Intermediate Node}{10}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}How to track the path?}{11}{subsubsection.4.1.2}%
-\contentsline {section}{\numberline {5}Step-by-step Demo}{11}{section.5}%
-\contentsline {section}{\numberline {6}Implementation Notes \& Complexity}{11}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Implementation Notes}{11}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Complexity Notes in Practice}{12}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Engineering Trade-offs}{12}{subsection.6.3}%
-\contentsline {section}{\numberline {7}Applications}{13}{section.7}%
-\contentsline {section}{\numberline {8}Quiz}{13}{section.8}%
-\contentsline {section}{\numberline {9}Programming Assignments}{13}{section.9}%
-\contentsline {section}{\numberline {10}Source Codes \& Instructions}{13}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Dependencies}{13}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}What Is Included}{13}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Input Graph Format}{14}{subsection.10.3}%
-\contentsline {subsection}{\numberline {10.4}Compile Instructions (Maximum Optimization)}{14}{subsection.10.4}%
-\contentsline {subsubsection}{\numberline {10.4.1}macOS (clang++)}{14}{subsubsection.10.4.1}%
-\contentsline {subsubsection}{\numberline {10.4.2}Windows (MSYS2/MinGW-w64 g++)}{14}{subsubsection.10.4.2}%
-\contentsline {subsubsection}{\numberline {10.4.3}Windows (MSVC cl)}{15}{subsubsection.10.4.3}%
-\contentsline {subsection}{\numberline {10.5}Run Workflow (After Compilation)}{15}{subsection.10.5}%
-\contentsline {subsection}{\numberline {10.6}Generate the Benchmark Datasets}{17}{subsection.10.6}%
-\contentsline {subsection}{\numberline {10.7}Generate the DAG Benchmark Dataset}{17}{subsection.10.7}%
-\contentsline {section}{\numberline {11}Datasets}{17}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Dataset Suite}{17}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}Dataset Files}{18}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}Header Format}{18}{subsection.11.3}%
-\contentsline {subsection}{\numberline {11.4}Benchmark Interpretation}{18}{subsection.11.4}%
-\contentsline {section}{\numberline {12}Comparison}{18}{section.12}%
-\contentsline {section}{References}{19}{section*.2}%
+\contentsline {subsection}{\numberline {1.1}Problem Introduction}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}The Evolution of Shortest Path Algorithms}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Shortest Paths in Today's World}{3}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Main Data Structures \& Algorithms}{3}{section.2}%
+\contentsline {section}{\numberline {3}Single Source Shortest Path (SSSP)}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Shortest Path in DAGs}{3}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Topological Order}{4}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}DAG Shortest Path Processing}{5}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Step-by-Step Demonstration: DAGs}{5}{subsubsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.2}Dijkstra's Algorithm}{8}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Dijkstra Optimizing}{9}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Step-by-Step Demonstration: Dijkstra's Algorithm}{10}{subsubsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.3}Shortest Path in Bellman-Ford}{12}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}How Bellman-Ford works: Global Relaxation}{12}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Bellman-Ford Superpower: Negative Cycle Detection}{13}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Step-by-Step Demonstration: Bellman-Ford Algorithm}{15}{subsubsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.4}SSSP Algorithm: How to track the path?}{17}{subsection.3.4}%
+\contentsline {section}{\numberline {4}All Pairs Shortest Path (APSP)}{18}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Floyd-Warshall Algorithm}{18}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}The Intermediate Node}{18}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}How to track the path?}{19}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Step-by-Step Demonstration: Floyd-Warshall Algorithm}{20}{subsubsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.2}A* Search Algorithm}{23}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Step-by-Step Demonstration: A*}{24}{subsubsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.3}Johnson's Algorithm}{24}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.3.1}How Johnson's Algorithm works}{25}{subsubsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.2}Step-by-Step Demonstration: Johnson's Algorithm}{26}{subsubsection.4.3.2}%
+\contentsline {section}{\numberline {5}Multi-Source Shortest Path (MSSP)}{27}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Super Source Simulation}{27}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Step-by-Step Demonstration: MSSP}{29}{subsubsection.5.1.1}%
+\contentsline {section}{\numberline {6}Implementation Notes \& Complexity}{29}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Implementation Notes}{29}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Complexity Notes in Practice}{30}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Engineering Trade-offs}{30}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Applications}{30}{section.7}%
+\contentsline {section}{\numberline {8}Quiz}{30}{section.8}%
+\contentsline {section}{\numberline {9}Programming Assignments}{30}{section.9}%
+\contentsline {section}{\numberline {10}Source Codes \& Instructions}{30}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Dependencies}{31}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}What Is Included}{31}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Input Graph Format}{31}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Compile Instructions (Maximum Optimization)}{31}{subsection.10.4}%
+\contentsline {subsubsection}{\numberline {10.4.1}macOS (clang++)}{32}{subsubsection.10.4.1}%
+\contentsline {subsubsection}{\numberline {10.4.2}Windows (MSYS2/MinGW-w64 g++)}{32}{subsubsection.10.4.2}%
+\contentsline {subsubsection}{\numberline {10.4.3}Windows (MSVC cl)}{33}{subsubsection.10.4.3}%
+\contentsline {subsection}{\numberline {10.5}Run Workflow (After Compilation)}{33}{subsection.10.5}%
+\contentsline {subsection}{\numberline {10.6}Generate the Benchmark Datasets}{35}{subsection.10.6}%
+\contentsline {subsection}{\numberline {10.7}Generate the DAG Benchmark Dataset}{35}{subsection.10.7}%
+\contentsline {section}{\numberline {11}Datasets}{35}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Dataset Suite}{35}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}Dataset Files}{35}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Header Format}{36}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.4}Benchmark Interpretation}{36}{subsection.11.4}%
+\contentsline {section}{\numberline {12}Comparison}{36}{section.12}%
+\contentsline {section}{References}{37}{section*.2}%

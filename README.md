@@ -8,7 +8,7 @@
 - [x] **Presentation (PPTX):** Placed in the `Presentation/` folder.
 - [x] **Presentation (PDF):** Placed in the `Presentation/` folder.
 - [x] **Document (LaTeX):** The report is located in the `SeminarReport/` folder.
-- [ ] **Source Code:** Please place your project source code in the `SourceCode/` folder.
+- [ ] **Source Code:** Placed in the `SourceCode/` folder.
 - [x] **YouTube Video Link:** https://www.youtube.com/watch?v=rgG_c79Os9U
 
 ## Member Contribution
