@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.17)  19 APR 2026 15:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.17)  19 APR 2026 22:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1033,7 +1033,7 @@ Package pgfplots notification 'compat/show suggested version=true': you might be
 
 \c@lstlisting=\count399
 (content/title.tex
-<img/hcmus-logo.png, id=254, 597.9138pt x 597.9138pt>
+<img/hcmus-logo.png, id=270, 597.9138pt x 597.9138pt>
 File: img/hcmus-logo.png Graphic file (type png)
 <use img/hcmus-logo.png>
 Package pdftex.def Info: img/hcmus-logo.png  used on input line 38.
@@ -1071,43 +1071,43 @@ File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T5/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `T5/cmtt/m/n' tried instead on input line 68.
-<img/DAGs1.png, id=364, 934.49126pt x 730.73pt>
+<img/DAGs1.png, id=384, 934.49126pt x 730.73pt>
 File: img/DAGs1.png Graphic file (type png)
 <use img/DAGs1.png>
 Package pdftex.def Info: img/DAGs1.png  used on input line 73.
 (pdftex.def)             Requested size: 430.00958pt x 336.25137pt.
  [5] [6 <./img/DAGs1.png>]
-<img/DAGs2.png, id=385, 879.285pt x 780.9175pt>
+<img/DAGs2.png, id=405, 879.285pt x 780.9175pt>
 File: img/DAGs2.png Graphic file (type png)
 <use img/DAGs2.png>
 Package pdftex.def Info: img/DAGs2.png  used on input line 100.
 (pdftex.def)             Requested size: 430.00958pt x 381.90222pt.
  [7 <./img/DAGs2.png>] [8] [9]
-<img/Dijkstra.png, id=405, 825.83531pt x 560.0925pt>
+<img/Dijkstra.png, id=425, 825.83531pt x 560.0925pt>
 File: img/Dijkstra.png Graphic file (type png)
 <use img/Dijkstra.png>
 Package pdftex.def Info: img/Dijkstra.png  used on input line 202.
 (pdftex.def)             Requested size: 430.00958pt x 291.6429pt.
  [10] [11 <./img/Dijkstra.png>] [12] [13] [14]
-<img/bellmanford1.png, id=439, 813.0375pt x 469.755pt>
+<img/bellmanford1.png, id=459, 813.0375pt x 469.755pt>
 File: img/bellmanford1.png Graphic file (type png)
 <use img/bellmanford1.png>
 Package pdftex.def Info: img/bellmanford1.png  used on input line 318.
 (pdftex.def)             Requested size: 430.00958pt x 248.44571pt.
  [15] [16 <./img/bellmanford1.png>]
-<img/bellmanford2.png, id=454, 782.925pt x 459.21562pt>
+<img/bellmanford2.png, id=474, 782.925pt x 459.21562pt>
 File: img/bellmanford2.png Graphic file (type png)
 <use img/bellmanford2.png>
 Package pdftex.def Info: img/bellmanford2.png  used on input line 350.
 (pdftex.def)             Requested size: 430.00958pt x 252.21901pt.
  [17 <./img/bellmanford2.png>] [18] [19]
-<img/floyd1.png, id=472, 1391.1975pt x 718.685pt>
+<img/floyd1.png, id=492, 1391.1975pt x 718.685pt>
 File: img/floyd1.png Graphic file (type png)
 <use img/floyd1.png>
 Package pdftex.def Info: img/floyd1.png  used on input line 450.
 (pdftex.def)             Requested size: 430.00958pt x 222.13206pt.
  [20 <./img/floyd1.png>]
-<img/floyd2.png, id=483, 1360.08125pt x 766.865pt>
+<img/floyd2.png, id=503, 1360.08125pt x 766.865pt>
 File: img/floyd2.png Graphic file (type png)
 <use img/floyd2.png>
 Package pdftex.def Info: img/floyd2.png  used on input line 466.
@@ -1117,13 +1117,13 @@ Overfull \hbox (2.11067pt too wide) in paragraph at lines 479--480
 []\T5/cmr/bx/n/12 Further Up-dates: \T5/cmr/m/n/12 Sim-i-larly, the cell \T5/cmtt/m/n/12 dist[1][3] \T5/cmr/m/n/12 is up-dated from $\OMS/cmsy/m/n/12 1$ \T5/cmr/m/n/12 to $\OT1/cmr/m/n/12 6$ \T5/cmr/m/n/12 be-cause \T5/cmtt/m/n/12 dist[1][0]
  []
 
-<img/floyd3.png, id=484, 1349.04pt x 760.8425pt>
+<img/floyd3.png, id=504, 1349.04pt x 760.8425pt>
 File: img/floyd3.png Graphic file (type png)
 <use img/floyd3.png>
 Package pdftex.def Info: img/floyd3.png  used on input line 484.
 (pdftex.def)             Requested size: 430.00958pt x 242.51099pt.
 [21 <./img/floyd2.png>]
-<img/floyd4.png, id=495, 1315.91624pt x 683.55376pt>
+<img/floyd4.png, id=515, 1315.91624pt x 683.55376pt>
 File: img/floyd4.png Graphic file (type png)
 <use img/floyd4.png>
 Package pdftex.def Info: img/floyd4.png  used on input line 498.
@@ -1154,32 +1154,57 @@ Overfull \hbox (1.24998pt too wide) in paragraph at lines 151--152
  []
 
 ) (content/sec08_datasets.tex [46]
-Overfull \hbox (139.49141pt too wide) in paragraph at lines 7--22
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+[]|\T5/cmr/m/n/10.95 Eager vs. D-ary vs.
+ []
+
+
+Underfull \hbox (badness 4556) in paragraph at lines 16--17
+[]|\T5/cmr/m/n/10.95 Floyd-Warshall vs. ($\OML/cmm/m/it/10.95 V\OMS/cmsy/m/n/10.95 ^^B$
+ []
+
+
+Underfull \hbox (badness 3199) in paragraph at lines 18--19
+[]|\T5/cmr/m/n/10.95 Bellman-Ford vs. Floyd-
+ []
+
+
+Overfull \hbox (36.86125pt too wide) in paragraph at lines 8--23
  [] 
  []
 
-[47]) (content/sec09_comparison.tex) (ref/ref.tex [48] (main.bbl) [49
+[47]) (content/sec09_comparison.tex [48]
+Underfull \hbox (badness 1043) in paragraph at lines 25--25
+[]|\T5/cmr/m/n/10.95 Optimal for large sparse
+ []
 
-]) (main.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+[]|\T5/cmr/m/n/10.95 Triggered \T5/cmr/m/it/10.95 std::bad_alloc
+ []
+
+[49]) (ref/ref.tex [50] (main.bbl [51
+
+]) [52]) (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6643A7AD69C621AFC709E7117731929B;12458.
+(rerunfilecheck)             Checksum: AC548A213112A830BE35FD788AF6B61F;13651.
  ) 
 Here is how much of TeX's memory you used:
- 39455 strings out of 467691
- 900311 string characters out of 5413499
- 1437471 words of memory out of 5000000
- 67575 multiletter control sequences out of 15000+600000
- 655705 words of font info for 94 fonts, out of 8000000 for 9000
+ 39494 strings out of 467691
+ 900924 string characters out of 5413499
+ 1437804 words of memory out of 5000000
+ 67597 multiletter control sequences out of 15000+600000
+ 660336 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  132i,12n,135p,889b,696s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Anh Kiet\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vncsc10.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr17.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on main.pdf (53 pages, 1910598 bytes).
+ <C:\Users\Anh Kiet\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx10.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vncsc10.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr17.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti10.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/Anh Kiet/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
+Output written on main.pdf (56 pages, 1978661 bytes).
 PDF statistics:
- 802 PDF objects out of 1000 (max. 8388607)
- 229 named destinations out of 1000 (max. 500000)
- 559 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 871 PDF objects out of 1000 (max. 8388607)
+ 243 named destinations out of 1000 (max. 500000)
+ 591 words of extra memory for PDF output out of 10000 (max. 10000000)
 

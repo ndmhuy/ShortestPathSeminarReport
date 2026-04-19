@@ -1,9 +1,21 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
-\bibitem{djb2}
-Dan Bernstein.
-\newblock Hash functions (djb2) - comp.lang.c usenet, 1991.
-\newblock Accessed: 2025-12-28.
+\bibitem{bellman1958}
+Richard Bellman.
+\newblock On a routing problem.
+\newblock {\em Quarterly of Applied Mathematics}, 16(1):87--90, 1958.
+
+\bibitem{boost_graph_library}
+{Boost.org}.
+\newblock Boost graph library (bgl) documentation.
+\newblock \url{https://www.boost.org/doc/libs/release/libs/graph/}, 2026.
+\newblock Reference for industry-standard heap backends. Accessed: 2026.
+
+\bibitem{cormen2022introduction}
+Thomas~H. Cormen, Charles~E. Leiserson, Ronald~L. Rivest, and Clifford Stein.
+\newblock {\em Introduction to Algorithms}.
+\newblock MIT Press, 4th edition, 2022.
+\newblock Foundational logic for Dijkstra, Bellman-Ford, and Floyd-Warshall.
 
 \bibitem{cses_flight_discount}
 {CSES Problem Set}.
@@ -12,20 +24,53 @@ Dan Bernstein.
 \newblock Programming problem used to demonstrate Dijkstra's algorithm on a
   state-space graph.
 
-\bibitem{eraser_io}
-{Eraser.io}.
-\newblock Eraser diagram tool.
-\newblock \url{https://eraser.io/}, 2025.
-\newblock Online tool used to design UML diagrams and system architecture
-  illustrations.
+\bibitem{dijkstra1959}
+Edsger~W. Dijkstra.
+\newblock A note on two problems in connexion with graphs.
+\newblock {\em Numerische Mathematik}, 1(1):269--271, 1959.
 
-\bibitem{google_gemini}
-{Google}.
-\newblock Gemini.
-\newblock \url{https://gemini.google.com/}, 2025.
-\newblock Generative AI model used to support progress tracking, multithreading
-  concepts, cross-platform implementation, code refactoring, and report
-  writing.
+\bibitem{dimacs_challenge}
+{DIMACS}.
+\newblock 9th dimacs implementation challenge - shortest paths.
+\newblock \url{http://www.dis.uniroma1.it/challenge9/}, 2006.
+\newblock The source for standardized road network datasets.
+
+\bibitem{euler1741}
+Leonhard Euler.
+\newblock Solutio problematis ad geometriam situs pertinentis.
+\newblock {\em Commentarii academiae scientiarum Petropolitanae}, pages
+  128--140, 1741.
+\newblock The foundation of Graph Theory via the Seven Bridges of Königsberg.
+
+\bibitem{floyd1962}
+Robert~W. Floyd.
+\newblock Algorithm 97: Shortest path.
+\newblock {\em Communications of the ACM}, 5(6):345, 1962.
+
+\bibitem{ch2008}
+Robert Geisberger, Peter Sanders, Dominik Schultes, and Daniel Delling.
+\newblock Contraction hierarchies: Faster and simpler hierarchical routing in
+  road networks.
+\newblock In {\em International Workshop on Experimental and Efficient
+  Algorithms}, pages 319--333. Springer, 2008.
+
+\bibitem{hart1968formal}
+Peter~E. Hart, Nils~J. Nilsson, and Bertram Raphael.
+\newblock A formal basis for the heuristic determination of minimum cost paths.
+\newblock {\em IEEE Transactions on Systems Science and Cybernetics}, 1968.
+\newblock The original proof of A* optimality.
+
+\bibitem{astar1968}
+Peter~E. Hart, Nils~J. Nilsson, and Bertram Raphael.
+\newblock A formal basis for the heuristic determination of minimum cost paths.
+\newblock {\em IEEE Transactions on Systems Science and Cybernetics},
+  4(2):100--107, 1968.
+
+\bibitem{kahn1962topological}
+Arthur~B. Kahn.
+\newblock Topological sorting of large networks.
+\newblock {\em Communications of the ACM}, 1962.
+\newblock Mathematical basis for the DAG-SSSP implementation.
 
 \bibitem{leetcode_binary_matrix}
 {LeetCode}.
@@ -35,14 +80,6 @@ Dan Bernstein.
   2026.
 \newblock Programming problem used to demonstrate the A* search algorithm on a
   2D grid.
-
-\bibitem{openai_chatgpt}
-{OpenAI}.
-\newblock Chatgpt.
-\newblock \url{https://chat.openai.com/}, 2025.
-\newblock AI assistant used to help draft technical reports, convert content to
-  LaTeX, and format tables, diagrams, and documentation based on
-  student-provided input.
 
 \bibitem{vnoj_dhserv}
 {VNOI Online Judge}.

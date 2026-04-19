@@ -590,11 +590,21 @@ INPUT .\content\sec08_datasets.tex
 INPUT .\content\sec08_datasets.tex
 INPUT .\content\sec08_datasets.tex
 INPUT content\sec08_datasets.tex
+INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnr10.tfm
+INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
+INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnbx10.tfm
 INPUT .\content\sec09_comparison.tex
 INPUT .\content\sec09_comparison.tex
 INPUT .\content\sec09_comparison.tex
 INPUT .\content\sec09_comparison.tex
 INPUT content\sec09_comparison.tex
+INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\tfm\vntex\vnr\vnti10.tfm
 INPUT .\ref\ref.tex
 INPUT .\ref\ref.tex
 INPUT ref\ref.tex
@@ -610,8 +620,14 @@ INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfont
 INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx8.pfb
 INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx8.pfb
+INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
 INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
 INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi12.pfb
+INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
 INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
@@ -620,6 +636,8 @@ INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfont
 INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnbx10.pfb
+INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnbx10.pfb
 INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnbx12.pfb
 INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnbx12.pfb
 INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vncsc10.pfb
@@ -630,6 +648,8 @@ INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr1
 INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr12.pfb
 INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr17.pfb
 INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnr17.pfb
+INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnti10.pfb
+INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnti10.pfb
 INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnti12.pfb
 INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vnti12.pfb
 INPUT C:\Users\Anh Kiet\AppData\Local\Programs\MiKTeX\fonts\type1\vntex\vnr\vntt12.pfb

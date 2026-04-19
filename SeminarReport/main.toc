@@ -61,7 +61,11 @@
 \contentsline {section}{\numberline {11}Datasets}{47}{section.11}%
 \contentsline {subsection}{\numberline {11.1}Dataset Suite}{47}{subsection.11.1}%
 \contentsline {subsection}{\numberline {11.2}Dataset Files}{47}{subsection.11.2}%
-\contentsline {subsection}{\numberline {11.3}Header Format}{47}{subsection.11.3}%
+\contentsline {subsection}{\numberline {11.3}Header Format}{48}{subsection.11.3}%
 \contentsline {subsection}{\numberline {11.4}Benchmark Interpretation}{48}{subsection.11.4}%
-\contentsline {section}{\numberline {12}Comparison}{48}{section.12}%
-\contentsline {section}{References}{49}{section*.6}%
+\contentsline {section}{\numberline {12}Empirical Performance Comparison}{48}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Temporal Efficiency and Priority Queue Dynamics}{48}{subsection.12.1}%
+\contentsline {subsection}{\numberline {12.2}Spatial Complexity and Resource Saturation}{49}{subsection.12.2}%
+\contentsline {subsection}{\numberline {12.3}Multi-Source Optimization Analysis}{50}{subsection.12.3}%
+\contentsline {subsection}{\numberline {12.4}Robustness and Algorithmic Selection}{50}{subsection.12.4}%
+\contentsline {section}{References}{51}{section*.6}%
