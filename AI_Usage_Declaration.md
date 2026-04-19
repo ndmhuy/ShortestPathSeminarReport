@@ -13,7 +13,8 @@
 + Extract core content from raw content.
 
 ## Nguyễn Đức Huy (25125014)
-- [Tool name]: [Description of how it was used]
+- Gemini AI:
++ Convert ideas, text, and data into a `tex` format suitable for the report.
 
 ## Nguyễn Đình Minh Huy (25125083)
 - GitHub Copilot:

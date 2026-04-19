@@ -6,10 +6,10 @@
 - Since the presentation will be delivered via video, I don't see any immediate need for changes
 
 ## Trần Như Khải (25125045)
-- - Since the presentation will be delivered via video, I don't see any immediate need for changes
+- Since the presentation will be delivered via video, I don't see any immediate need for changes
 
 ## Nguyễn Đức Huy (25125014)
-- [List of updates/fixes made by this member]
+- There have been no changes.
 
 ## Nguyễn Đình Minh Huy (25125083)
 - Implemented DAG-focused data pipeline in source code:

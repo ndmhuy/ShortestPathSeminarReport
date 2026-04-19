@@ -1,9 +1,9 @@
 \begin{thebibliography}{10}
 
-\bibitem{bellman1958routing}
-Richard Bellman.
-\newblock On a routing problem.
-\newblock {\em Quarterly of Applied Mathematics}, 16(1):87--90, 1958.
+\bibitem{djb2}
+Dan Bernstein.
+\newblock Hash functions (djb2) - comp.lang.c usenet, 1991.
+\newblock Accessed: 2025-12-28.
 
 \bibitem{boost_graph_library}
 {Boost.org}.
@@ -23,49 +23,29 @@ Thomas~H. Cormen, Charles~E. Leiserson, Ronald~L. Rivest, and Clifford Stein.
 \newblock \url{https://cses.fi/problemset/task/1195/}, 2026.
 \newblock Programming problem used to demonstrate Dijkstra's algorithm on a state-space graph.
 
-\bibitem{dijkstra1959note}
-E.~W. Dijkstra.
-\newblock A note on two problems in connexion with graphs.
-\newblock {\em Numerische Mathematik}, 1(1):269--271, 1959.
-
 \bibitem{dimacs_challenge}
 {DIMACS}.
 \newblock 9th dimacs implementation challenge - shortest paths.
 \newblock \url{http://www.dis.uniroma1.it/challenge9/}, 2006.
 \newblock The source for standardized road network datasets.
 
-\bibitem{dijkstra2001interview}
-{Edsger W. Dijkstra Archive}.
-\newblock An interview with edsger w. dijkstra.
-\newblock \url{https://www.cs.utexas.edu/~EWD/transcriptions/EWD13xx/EWD1308.html}, 2001.
-\newblock Source for Dijkstra's design anecdote.
+\bibitem{eraser_io}
+{Eraser.io}.
+\newblock Eraser diagram tool.
+\newblock \url{https://eraser.io/}, 2025.
+\newblock Online tool used to design UML diagrams and system architecture illustrations.
 
-\bibitem{floyd1962algorithm97}
-Robert~W. Floyd.
-\newblock Algorithm 97: Shortest path.
-\newblock {\em Communications of the ACM}, 5(6):345, 1962.
-
-\bibitem{ford1956network}
-Lester~R. Ford and Delbert~R. Fulkerson.
-\newblock {\em Maximal Flow Through a Network}.
-\newblock RAND Corporation, 1956.
-\newblock Foundational network flow work often cited in Bellman-Ford history.
-
-\bibitem{fredman1987fibonacci}
-Michael~L. Fredman and Robert~E. Tarjan.
-\newblock Fibonacci heaps and their uses in improved network optimization algorithms.
-\newblock {\em Journal of the ACM}, 34(3):596--615, 1987.
+\bibitem{google_gemini}
+{Google}.
+\newblock Gemini.
+\newblock \url{https://gemini.google.com/}, 2025.
+\newblock Generative AI model used to support progress tracking, multithreading concepts, cross-platform implementation, code refactoring, and report writing.
 
 \bibitem{hart1968formal}
 Peter~E. Hart, Nils~J. Nilsson, and Bertram Raphael.
 \newblock A formal basis for the heuristic determination of minimum cost paths.
 \newblock {\em IEEE Transactions on Systems Science and Cybernetics}, 1968.
 \newblock The original proof of A* optimality.
-
-\bibitem{johnson1977efficient}
-Donald~B. Johnson.
-\newblock Efficient algorithms for shortest paths in sparse networks.
-\newblock {\em Journal of the ACM}, 24(1):1--13, 1977.
 
 \bibitem{kahn1962topological}
 Arthur~B. Kahn.
@@ -79,32 +59,16 @@ Arthur~B. Kahn.
 \newblock \url{https://leetcode.com/problems/shortest-path-in-binary-matrix/description/}, 2026.
 \newblock Programming problem used to demonstrate the A* search algorithm on a 2D grid.
 
-\bibitem{malcolm1959application}
-Donald~G. Malcolm, James~H. Roseboom, Charles~E. Clark, and William Fazar.
-\newblock Application of a technique for research and development program evaluation.
-\newblock {\em Operations Research}, 7(5):646--669, 1959.
-\newblock Foundational PERT reference.
-
-\bibitem{moore1959shortest}
-Edward~F. Moore.
-\newblock The shortest path through a maze.
-\newblock In {\em Proceedings of an International Symposium on the Theory of Switching}, pages 285--292, 1959.
-
-\bibitem{shimbel1955structure}
-Alfonso Shimbel.
-\newblock Structure in communication nets.
-\newblock {\em Proceedings of the Symposium on Information Networks}, 1955.
-\newblock Early shortest-path related formulation.
+\bibitem{openai_chatgpt}
+{OpenAI}.
+\newblock Chatgpt.
+\newblock \url{https://chat.openai.com/}, 2025.
+\newblock AI assistant used to help draft technical reports, convert content to LaTeX, and format tables, diagrams, and documentation based on student-provided input.
 
 \bibitem{vnoj_dhserv}
 {VNOI Online Judge}.
 \newblock {Dịch vụ truyền thông (dhserv)}.
 \newblock \url{https://oj.vnoi.info/problem/dhserv}, 2026.
 \newblock Programming problem used to demonstrate the dynamic implementation of the Floyd-Warshall algorithm.
-
-\bibitem{warshall1962theorem}
-Stephen Warshall.
-\newblock A theorem on boolean matrices.
-\newblock {\em Journal of the ACM}, 9(1):11--12, 1962.
 
 \end{thebibliography}

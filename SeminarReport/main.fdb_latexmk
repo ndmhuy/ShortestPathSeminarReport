@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1776610228.13742 "main.aux" "main.bbl" "main" 1776610232.1426 0
-  "./ref/ref.bib" 1776610224.60815 5731 2c063e10efdcfce07d0294aa47513628 ""
+["bibtex main"] 1776611760.39649 "main.aux" "main.bbl" "main" 1776611763.43506 0
+  "./ref/ref.bib" 1776611669.7822 3705 cf738e05a7d48c1e1293b17a8a2f359a ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1776610231.65062 15924 650853247968a3f3e6984fce4ba71c94 "pdflatex"
+  "main.aux" 1776611763.11783 15651 b1a673a0a623b1da4b7d10886beb8ce4 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1776610228.24181 "/Users/huynguyen/Documents/CS163-Cpp/ShortestPathSeminarReport/SeminarReport/main.tex" "main.pdf" "main" 1776610232.14289 0
+["pdflatex"] 1776611760.49618 "/Users/huynguyen/Documents/CS163-Cpp/ShortestPathSeminarReport/SeminarReport/main.tex" "main.pdf" "main" 1776611763.43523 0
   "/Users/huynguyen/Documents/CS163-Cpp/ShortestPathSeminarReport/SeminarReport/main.tex" 1776605538.0935 2436 9a206bec8fb9328d013f14cdf3f6b471 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -294,7 +294,7 @@
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "content/03_group_info.tex" 1776463383.13353 563 c26ea7ee57450ea10514f2b27c96af5c ""
   "content/sec01_introduction.tex" 1776605537.74845 2988 5d376cbc8c81ca2a823ea3e67c7a37f3 ""
-  "content/sec02_algorithms.tex" 1776610204.44279 40219 278faed206ee31d1baa237e3c8880556 ""
+  "content/sec02_algorithms.tex" 1776610303.47862 40219 278faed206ee31d1baa237e3c8880556 ""
   "content/sec03_implementation.tex" 1776605537.75687 2440 f51b7b6d69f6843c99e18a792edb0e29 ""
   "content/sec04_applications.tex" 1776605537.75906 3515 f7417cb0cf05204d6fb6d27e6e06eb0b ""
   "content/sec05_quiz.tex" 1776605537.76159 6605 f8854dd55de76ed0ef6f2a4d7a14c3d2 ""
@@ -314,11 +314,11 @@
   "img/floyd3.png" 1776605537.87134 199637 966926b0360188db55702a12bfa22162 ""
   "img/floyd4.png" 1776605537.88204 200873 9dc5c6cd8a6fbc0a1e76e7c6155ac71d ""
   "img/hcmus-logo.png" 1776260309.59681 258629 5b1ca4d1e50ebb745d59a14c962a8fac ""
-  "main.aux" 1776610231.65062 15924 650853247968a3f3e6984fce4ba71c94 "pdflatex"
-  "main.bbl" 1776610228.23749 4248 008f4ca11301d7de6f3d98514353c09e "bibtex main"
-  "main.out" 1776610231.66859 13651 ac548a213112a830be35fd788af6b61f "pdflatex"
+  "main.aux" 1776611763.11783 15651 b1a673a0a623b1da4b7d10886beb8ce4 "pdflatex"
+  "main.bbl" 1776611760.49185 2912 521a036608095b1f7438331afb9145df "bibtex main"
+  "main.out" 1776611763.1204 13651 ac548a213112a830be35fd788af6b61f "pdflatex"
   "main.tex" 1776605538.0935 2436 9a206bec8fb9328d013f14cdf3f6b471 ""
-  "main.toc" 1776610231.66925 6663 582da28bdf9826123d10269537219a2e "pdflatex"
+  "main.toc" 1776611763.12098 6663 582da28bdf9826123d10269537219a2e "pdflatex"
   "ref/ref.tex" 1776260309.58431 268 2c3dab62d972a92fcdf3915a36ddca60 ""
   (generated)
   "main.aux"
