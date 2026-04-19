@@ -8,7 +8,9 @@
 + Delivers supplementary algorithmic knowledge.
 
 ## Trần Như Khải (25125045)
-- [Tool name]: [Description of how it was used]
+- Gemini AI: 
++ Utilized for LaTeX editing
++ Extract core content from raw content.
 
 ## Nguyễn Đức Huy (25125014)
 - [Tool name]: [Description of how it was used]

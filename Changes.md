@@ -6,7 +6,7 @@
 - Since the presentation will be delivered via video, I don't see any immediate need for changes
 
 ## Trần Như Khải (25125045)
-- [List of updates/fixes made by this member]
+- - Since the presentation will be delivered via video, I don't see any immediate need for changes
 
 ## Nguyễn Đức Huy (25125014)
 - [List of updates/fixes made by this member]
